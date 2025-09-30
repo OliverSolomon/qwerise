@@ -10,9 +10,9 @@ export default function Contact() {
             Stay Connected
           </h2>
           
-          <p className="text-xl text-gray-700 dark:text-gray-300 mb-12">
-            We're building something powerful. Join our community and be the first to know when we launch.
-          </p>
+           <p className="text-xl text-gray-700 dark:text-gray-300 mb-12">
+             We&apos;re building something powerful. Join our community and be the first to know when we launch.
+           </p>
 
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             {/* Contact Information */}
