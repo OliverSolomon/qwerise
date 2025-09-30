@@ -16,6 +16,8 @@
 # next.js
 /.next/
 /out/
+/cpanel-deploy/
+/qwerise-website.zip
 
 # production
 /build
