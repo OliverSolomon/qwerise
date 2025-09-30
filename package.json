@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
+    "build:turbo": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
+    "copy-files": "xcopy out\\* cpanel-deploy\\ /E /I /Y",
     "deploy": "npm run build && npm run copy-files"
   },
   "dependencies": {
