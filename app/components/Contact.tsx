@@ -29,10 +29,10 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Email</p>
                     <a 
-                      href="mailto:andy@qwerise.org"
+                      href="mailto:info@qwerise.org"
                       className="text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-purple-100 font-medium"
                     >
-                      andy@qwerise.org
+                      info@qwerise.org
                     </a>
                   </div>
                 </div>
@@ -44,7 +44,7 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Phone</p>
                     <a 
-                      href="tel:+254727776506"
+                      href="tel:+2547 14254097"
                       className="text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-purple-100 font-medium"
                     >
                       +254 727 776 506

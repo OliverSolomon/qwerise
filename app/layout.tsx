@@ -108,9 +108,9 @@ export default function RootLayout({
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+254727776506",
+                "telephone": "+2547 14254097",
                 "contactType": "General Inquiry",
-                "email": "andy@qwerise.org"
+                "email": "info@qwerise.org"
               },
               "sameAs": [
                 "https://www.instagram.com/q_we_rise_network",

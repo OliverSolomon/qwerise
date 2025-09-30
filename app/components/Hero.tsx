@@ -41,7 +41,7 @@ export default function Hero() {
           {/* Call to action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="mailto:andy@qwerise.org"
+              href="mailto:info@qwerise.org"
               className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800"
               aria-label="Contact us via email"
             >

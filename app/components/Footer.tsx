@@ -51,15 +51,15 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-gray-300">
               <p>
                 <a 
-                  href="mailto:andy@qwerise.org"
+                  href="mailto:info@qwerise.org"
                   className="hover:text-white transition-colors"
                 >
-                  andy@qwerise.org
+                  info@qwerise.org
                 </a>
               </p>
               <p>
                 <a 
-                  href="tel:+254727776506"
+                  href="tel:+2547 14254097"
                   className="hover:text-white transition-colors"
                 >
                   +254 727 776 506
