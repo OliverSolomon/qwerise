@@ -1,82 +1,114 @@
 // Footer component with organization details and legal information
 // Provides essential information and maintains professional appearance
 
+import { FacebookIcon, InstagramIcon, XIcon } from "lucide-react";
+import Image from "next/image";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
+    <footer className="bg-[#00B4A6] text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-12 mb-8">
           {/* Organization Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Q We Rise Network</h3>
-            <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              A feminist, Kenyan-based organization advancing gender equity, mental wellness, 
+          <div className="md:col-span-1">
+            <div className="flex items-center space-x-3 mb-4">
+              <Image
+                src="/Q We Rise Transparent logo.png"
+                alt="Q We Rise Network Logo"
+                width={50}
+                height={50}
+                className="w-12 h-12 object-contain filter brightness-0 invert"
+              />
+              <h3 className="text-xl font-bold">Q WE RISE NETWORK</h3>
+            </div>
+            <p className="text-white/90 text-sm leading-relaxed mb-4">
+              Q We Rise Network is a feminist, Kenyan-based organization advancing gender equity, mental wellness, 
               and sexual and reproductive health rights for ITGNC and LBQ communities.
-            </p>
-            <p className="text-gray-400 text-xs">
-              Founded in 2023 • Nairobi, Kenya
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Links Column 1 */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#about" className="text-gray-300 hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#contact" className="text-white/90 hover:text-white transition-colors">
                   Contact
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://www.instagram.com/q_we_rise_network?igsh=MXVtZjhucHVxdTZ1bA==" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Instagram
+                <a href="mailto:info@qwerise.org" className="text-white/90 hover:text-white transition-colors">
+                  Get in Touch
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-white/90 hover:text-white transition-colors">
+                  Resources
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-white/90 hover:text-white transition-colors">
+                  About Us
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Links Column 2 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-sm text-gray-300">
-              <p>
-                <a 
-                  href="mailto:info@qwerise.org"
-                  className="hover:text-white transition-colors"
-                >
-                  info@qwerise.org
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#contact" className="text-white/90 hover:text-white transition-colors">
+                  Terms of Service
                 </a>
-              </p>
-              <p>
-                <a 
-                  href="tel:+2547 14254097"
-                  className="hover:text-white transition-colors"
-                >
-                  +254 727 776 506
+              </li>
+              <li>
+                <a href="#contact" className="text-white/90 hover:text-white transition-colors">
+                  Privacy Policy
                 </a>
-              </p>
-              <p>Nairobi, Kenya</p>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 Q We Rise Network. All rights reserved.
-          </p>
-          <p className="text-gray-500 text-xs mt-2">
-            Website under development. For immediate assistance, please contact us directly.
-          </p>
+        {/* Social Media Icons */}
+        <div className="border-t border-white/20 pt-8 flex justify-between items-center">
+          <div className="text-sm text-white/80">
+            © 2026 Q We Rise Network. All rights reserved.
+          </div>
+          <div className="flex space-x-4">
+            <a
+              href="https://www.instagram.com/q_we_rise_network?igsh=MXVtZjhucHVxdTZ1bA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-white/80 transition-colors"
+              aria-label="Follow us on Instagram (opens in new tab)"
+            >
+              <span className="sr-only">Instagram</span>
+              <InstagramIcon size={24} />
+            </a>
+            <a
+              href="https://www.facebook.com/QWeRiseNetwork"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-white/80 transition-colors"
+              aria-label="Follow us on Facebook (opens in new tab)"
+            >
+              <span className="sr-only">Facebook</span>
+              <FacebookIcon size={24} />
+            </a>
+            <a
+              href="https://twitter.com/QWeRiseNetwork"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-white/80 transition-colors"
+              aria-label="Follow us on Twitter (opens in new tab)"
+            >
+              <span className="sr-only">Twitter</span>
+              <XIcon size={24} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

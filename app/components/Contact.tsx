@@ -1,142 +1,187 @@
 // Contact section with contact information and email signup
 // Provides ways for visitors to connect with the organization
 
+import {HandCoins, Handshake, Megaphone, Briefcase, Twitter, X, Facebook, FacebookIcon, InstagramIcon, XIcon, MapPinIcon, PhoneIcon, MailIcon } from 'lucide-react'
+
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-purple-900">
+    <section id="contact" className="py-20 bg-[#7B2CBF] text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-            Stay Connected
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+            Join Q We Rise Network&apos;s mission for all ITGNC & LBQ lives.
           </h2>
-          
-           <p className="text-xl text-gray-700 dark:text-gray-300 mb-12">
-             We&apos;re building something powerful. Join our community and be the first to know when we launch.
-           </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-12">
-            {/* Contact Information */}
-            <div className="text-left">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Get in Touch
-              </h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center">
-                    <span className="text-purple-600 dark:text-purple-300 text-sm">✉</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Email</p>
-                    <a 
-                      href="mailto:info@qwerise.org"
-                      className="text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-purple-100 font-medium"
-                    >
-                      info@qwerise.org
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center">
-                    <span className="text-purple-600 dark:text-purple-300 text-sm">📱</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Phone</p>
-                    <a 
-                      href="tel:+2547 14254097"
-                      className="text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-purple-100 font-medium"
-                    >
-                      +254 727 776 506
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center">
-                    <span className="text-purple-600 dark:text-purple-300 text-sm">📍</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Location</p>
-                    <p className="text-purple-600 dark:text-purple-300 font-medium">Nairobi, Kenya</p>
-                  </div>
-                </div>
-              </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {/* Fundraise */}
+          <div className="bg-white text-[#1A1A2E] p-6 rounded-lg shadow-lg">
+            <div className="flex items-center justify-center mb-4">
+            <HandCoins size={36} />
+            <h3 className="text-xl font-bold ml-4 mb-3">Be a fundraiser.</h3>
             </div>
-
-            {/* Email Signup */}
-            <div className="text-left">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Stay Updated
-              </h3>
-              
-              <form className="space-y-4" aria-label="Email signup form">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
-                    placeholder="your.email@example.com"
-                    aria-describedby="email-privacy"
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800"
-                >
-                  Join Our Community
-                </button>
-                
-                <p id="email-privacy" className="text-xs text-gray-600 dark:text-gray-400">
-                  We respect your privacy. Your email will only be used to send updates about our work and events.
-                </p>
-              </form>
-            </div>
+            <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+              Start your own fundraiser and invite friends, family, and social channels to raise money 
+              and awareness in support of our cause.
+            </p>
+            <a
+              href="mailto:info@qwerise.org"
+              className="inline-block px-4 py-2 bg-[#7B2CBF] text-white font-bold rounded hover:bg-[#6A1BB0] transition-colors text-sm"
+            >
+              Fundraise Now
+            </a>
           </div>
 
-          {/* Social Media Links */}
-          <div className="border-t border-gray-200 dark:border-gray-700 pt-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Follow Our Journey
-            </h3>
-            <div className="flex justify-center space-x-6">
-              <a
-                href="https://www.instagram.com/q_we_rise_network?igsh=MXVtZjhucHVxdTZ1bA=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-purple-100 transition-colors"
-                aria-label="Follow us on Instagram (opens in new tab)"
+          {/* Advocate */}
+          <div className="bg-white text-[#1A1A2E] p-6 rounded-lg shadow-lg">
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center justify-center mb-4">
+            <Megaphone size={36} />
+            </div>
+            <h3 className="text-xl font-bold ml-2 mb-3">Advocate for change.</h3>
+            </div>
+            <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+              We&apos;re dedicated to advocating for ITGNC and LBQ young people. Join us and learn how you can help.
+            </p>
+            <a
+              href="#about"
+              className="inline-block px-4 py-2 bg-[#7B2CBF] text-white font-bold rounded hover:bg-[#6A1BB0] transition-colors text-sm"
+            >
+              Learn More
+            </a>
+          </div>
+
+          {/* Volunteer */}
+          <div className="bg-white text-[#1A1A2E] p-6 rounded-lg shadow-lg">
+          
+            <div className="flex items-center justify-center mb-4">
+            <Handshake size={36} />
+            
+            <h3 className="text-xl font-bold ml-2 mb-3">Volunteer your time.</h3>
+            </div>
+            <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+              Our volunteer support team is on the front lines of our mission. We rely on our volunteers 
+              to help us provide essential support.
+            </p>
+            <a
+              href="mailto:info@qwerise.org"
+              className="inline-block px-4 py-2 bg-[#7B2CBF] text-white font-bold rounded hover:bg-[#6A1BB0] transition-colors text-sm"
+            >
+              Volunteer Now
+            </a>
+          </div>
+
+          {/* Work */}
+          <div className="bg-white text-[#1A1A2E] p-6 rounded-lg shadow-lg">
+            <div className="flex items-center justify-center mb-4">
+            <Briefcase size={36} />
+            
+            <h3 className="text-xl font-bold ml-2 mb-3">Work at Q We Rise Network.</h3>
+            </div>
+            <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+              We are always looking for smart, passionate, and diverse people to join our team. 
+              Learn more about open roles and apply today!
+            </p>
+            <a
+              href="mailto:info@qwerise.org"
+              className="inline-block px-4 py-2 bg-[#7B2CBF] text-white font-bold rounded hover:bg-[#6A1BB0] transition-colors text-sm"
+            >
+              See Jobs
+            </a>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-white text-[#1A1A2E] p-8 rounded-lg shadow-lg max-w-4xl mx-auto mb-12">
+          <h3 className="text-3xl font-bold mb-8 text-center">Get in Touch</h3>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="flex items-center justify-center mb-4"><MailIcon size={24} /></div>
+              <p className="text-sm text-gray-600 mb-2">Email</p>
+              <a 
+                href="mailto:info@qwerise.org"
+                className="text-[#7B2CBF] hover:text-[#6A1BB0] font-medium"
               >
-                <span className="sr-only">Instagram</span>
-                <span className="text-2xl">📷</span>
-              </a>
-              <a
-                href="https://www.facebook.com/QWeRiseNetwork"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-purple-100 transition-colors"
-                aria-label="Follow us on Facebook (opens in new tab)"
-              >
-                <span className="sr-only">Facebook</span>
-                <span className="text-2xl">📘</span>
-              </a>
-              <a
-                href="https://twitter.com/QWeRiseNetwork"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-600 dark:text-purple-300 hover:text-purple-800 dark:hover:text-purple-100 transition-colors"
-                aria-label="Follow us on Twitter (opens in new tab)"
-              >
-                <span className="sr-only">Twitter</span>
-                <span className="text-2xl">🐦</span>
+                info@qwerise.org
               </a>
             </div>
+            <div>
+              <div className="flex items-center justify-center mb-4"><PhoneIcon size={24} /></div>
+              <p className="text-sm text-gray-600 mb-2">Phone</p>
+              <a 
+                href="tel:+254727776506"
+                className="text-[#7B2CBF] hover:text-[#6A1BB0] font-medium"
+              >
+                 +254 714 254 097
+              </a>
+            </div>
+            <div>
+              <div className="flex items-center justify-center mb-4"><MapPinIcon size={24} /></div>
+              <p className="text-sm text-gray-600 mb-2">Location</p>
+              <p className="text-[#7B2CBF] font-medium">Nairobi, Kenya</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="bg-white text-[#1A1A2E] p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold mb-4 text-center">Join Our Newsletter</h3>
+          <form className="flex flex-col sm:flex-row gap-4" aria-label="Email signup form">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B2CBF] focus:border-[#7B2CBF] text-[#1A1A2E]"
+              placeholder="Email Address"
+              aria-describedby="email-privacy"
+            />
+            <button
+              type="submit"
+              className="px-8 py-3 bg-[#7B2CBF] hover:bg-[#6A1BB0] text-white font-bold rounded-lg transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p id="email-privacy" className="text-xs text-gray-600 mt-3 text-center">
+            We respect your privacy. Your email will only be used to send updates about our work and events.
+          </p>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="mt-12 text-center">
+          <h3 className="text-xl font-bold mb-6">Follow Our Journey</h3>
+          <div className="flex justify-center space-x-6">
+            <a
+              href="https://www.instagram.com/q_we_rise_network?igsh=MXVtZjhucHVxdTZ1bA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#E0AAFF] transition-colors text-2xl"
+              aria-label="Follow us on Instagram (opens in new tab)"
+            >
+              <span className="sr-only">Instagram</span>
+              <InstagramIcon size={24} />
+            </a>
+            <a
+              href="https://www.facebook.com/QWeRiseNetwork"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#E0AAFF] transition-colors text-2xl"
+              aria-label="Follow us on Facebook (opens in new tab)"
+            >
+              <span className="sr-only">Facebook</span>
+              <FacebookIcon size={24} />
+            </a>
+            <a
+              href="https://twitter.com/QWeRiseNetwork"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#E0AAFF] transition-colors text-2xl"
+              aria-label="Follow us on Twitter (opens in new tab)"
+            >
+              <span className="sr-only">Twitter</span>
+              <XIcon size={24} />
+            </a>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ import MaintenanceBadge from "./components/MaintenanceBadge";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-900 dark:to-purple-900">
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
         <Hero />
