@@ -12,21 +12,18 @@ export default function QueersGotTalentVideo() {
             </div>
 
             {/* Video */}
-            <div className="w-full px-4 sm:px-0">
-                <div className="relative w-full aspect-video sm:aspect-[21/9] max-h-[80vh] overflow-hidden bg-black/5">
-                    {/* 
-                        To use Google Drive:
-                        1. Share the video 'Anyone with the link can view'
-                        2. Open the video in Drive -> Three dots -> 'Open in new window'
-                        3. Three dots -> 'Embed item...'
-                        4. Copy the URL from the src attribute and paste it below
-                    */}
-                    <iframe
-                        src="https://drive.google.com/file/d/1MV3OP7_QsKjbj1xUyRu35omACxvW2hy4/preview"
-                        className="w-full h-full border-0"
-                        allow="autoplay"
-                        title="Queers Got Talent Highlights"
-                    ></iframe>
+            <div className="w-full">
+                <div className="relative w-full aspect-video sm:aspect-[21/9] max-h-[90vh] overflow-hidden bg-black/5">
+                    <video
+                        className="w-full h-full object-cover pointer-events-none"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    >
+                        <source src="https://drive.google.com/uc?id=1MV3OP7_QsKjbj1xUyRu35omACxvW2hy4&export=download" type="video/mp4" />
+                        Your browser does not support the video element.
+                    </video>
                     <div className="absolute inset-0 shadow-inner pointer-events-none"></div>
                 </div>
             </div>
