@@ -21,7 +21,7 @@ export default function QueersGotTalentVideo() {
                         loop
                         playsInline
                     >
-                        <source src="https://pub-c29a9ecba6b2417893d154cd57dab684.r2.dev/qgt-highlights-compressed.mp4" type="video/mp4" />
+                        <source src="https://media.qwerise.org/qgt-highlights-compressed.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <div className="absolute inset-0 shadow-inner pointer-events-none"></div>
