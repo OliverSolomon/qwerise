@@ -12,7 +12,12 @@ export default function QueersGotTalentVideo() {
             </div>
 
             {/* Video */}
-            <div className="w-full">
+            <div className="flex justify-center">
+                <a href="/gallery" className="text-[#7B2CBF] hover:text-[#6A1BB0] font-bold">
+                    See our talent
+                </a>
+            </div>
+            {/* <div className="w-full">
                 <div className="relative w-full aspect-video sm:aspect-[21/9] max-h-[90vh] overflow-hidden bg-black/5">
                     <video
                         className="w-full h-full object-cover pointer-events-none"
@@ -20,13 +25,14 @@ export default function QueersGotTalentVideo() {
                         muted
                         loop
                         playsInline
+                        preload="auto"
                     >
-                        <source src="https://drive.google.com/uc?id=1MV3OP7_QsKjbj1xUyRu35omACxvW2hy4&export=download" type="video/mp4" />
+                        <source src="https://drive.google.com/uc?export=view&id=1MV3OP7_QsKjbj1xUyRu35omACxvW2hy4" type="video/mp4" />
                         Your browser does not support the video element.
                     </video>
                     <div className="absolute inset-0 shadow-inner pointer-events-none"></div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
