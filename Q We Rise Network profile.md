@@ -88,7 +88,7 @@ This holistic wellbeing model has facilitated us to hold 3 community wellness ev
 
 Contact Information
 
-* Email: qujeniwerise@gmail.com  
+* Email:  Info@qwerise.org  
 * Contact: \+254727776506  
 * Social Media: @QWeRiseNetwork (Facebook, X, Instagram,linkedin,Tiktok)
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Dancing_Script, Inter } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,12 +26,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Q We Rise Network - Website Under Development",
-  description: "Q We Rise Network is a feminist, Kenyan-based organization advancing gender equity, mental wellness, and sexual and reproductive health rights for ITGNC and LBQ communities. Our website is currently under development.",
+  metadataBase: new URL("https://qwerise.org"),
+  title: "Q We Rise Network | Advancing Rights & Wellness for ITGNC & LBQ Communities",
+  description: "Q We Rise Network is a feminist, Kenyan-based organization advancing gender equity, mental wellness, and sexual and reproductive health rights for ITGNC and LBQ communities.",
   keywords: "LGBTQ+, intersex, transgender, non-binary, lesbian, bisexual, queer, Kenya, feminist, SRHR, mental wellness, advocacy",
   authors: [{ name: "Q We Rise Network" }],
   robots: "noindex, nofollow", // Block search engines until launch
-  
+
   // Enhanced Open Graph tags for social media sharing
   openGraph: {
     title: "Q We Rise Network - Advancing Rights for ITGNC & LBQ Communities",
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Q We Rise Network",
     images: [
       {
-        url: "https://qwerise.org/Q We Rise Transparent logo.png",
+        url: "/Q We Rise Transparent logo.png",
         width: 1200,
         height: 630,
         alt: "Q We Rise Network Logo - Feminist organization advancing rights for ITGNC and LBQ communities in Kenya",
@@ -48,17 +50,17 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
   },
-  
+
   // Twitter Card tags
   twitter: {
     card: "summary_large_image",
     title: "Q We Rise Network - Advancing Rights for ITGNC & LBQ Communities",
     description: "A feminist, Kenyan-based organization empowering ITGNC and LBQ individuals through rights-based advocacy, inclusive SRHR education, economic justice, and creative expression.",
-    images: ["https://qwerise.org/Q We Rise Transparent logo.png"],
+    images: ["/Q We Rise Transparent logo.png"],
     creator: "@QWeRiseNetwork",
     site: "@QWeRiseNetwork",
   },
-  
+
   // Additional meta tags
   other: {
     "og:image:width": "1200",
@@ -80,26 +82,26 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/Q We Rise Transparent logo.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/Q We Rise Transparent logo.png" />
         <link rel="apple-touch-icon" href="/Q We Rise Transparent logo.png" />
-        
+
         {/* Additional meta tags for better social sharing */}
-        <meta property="og:image:secure_url" content="https://qwerise.org/Q We Rise Transparent logo.png" />
+        <meta property="og:image:secure_url" content="/Q We Rise Transparent logo.png" />
         <meta name="twitter:domain" content="qwerise.org" />
         <meta name="twitter:url" content="https://qwerise.org" />
-        
+
         {/* Alternative social media images */}
-        <meta property="og:image" content="https://qwerise.org/Q We Rise Transparent logo.png" />
+        <meta property="og:image" content="/Q We Rise Transparent logo.png" />
         <meta property="og:image:url" content="https://qwerise.org/Q We Rise Transparent logo.png" />
-        
+
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#7B2CBF" />
         <meta name="msapplication-TileColor" content="#7B2CBF" />
-        
+
         {/* Additional SEO meta tags */}
         <meta name="geo.region" content="KE" />
         <meta name="geo.placename" content="Nairobi" />
         <meta name="geo.position" content="-1.2921;36.8219" />
         <meta name="ICBM" content="-1.2921, 36.8219" />
-        
+
         {/* Structured Data for Organization */}
         <script
           type="application/ld+json"
@@ -110,7 +112,7 @@ export default function RootLayout({
               "name": "Q We Rise Network",
               "alternateName": "Q We Rise",
               "url": "https://qwerise.org",
-              "logo": "https://qwerise.org/Q We Rise Transparent logo.png",
+              "logo": "/Q We Rise Transparent logo.png",
               "description": "A feminist, Kenyan-based organization advancing gender equity, mental wellness, and sexual and reproductive health rights for ITGNC and LBQ communities.",
               "foundingDate": "2023",
               "address": {
@@ -149,6 +151,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${inter.variable} antialiased`}
       >
+        <Toaster position="top-right" richColors />
         {children}
       </body>
     </html>

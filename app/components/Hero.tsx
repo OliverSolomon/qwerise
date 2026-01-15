@@ -52,27 +52,26 @@ export default function Hero() {
           {/* Left side - Text content */}
           <div className="relative z-20">
             {/* Main heading */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              You deserve a <span className="font-script text-6xl sm:text-7xl lg:text-8xl block mt-2">welcoming, loving world.</span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              You deserve a <span className="font-script text-5xl sm:text-7xl lg:text-8xl block mt-2">welcoming, loving world.</span>
             </h1>
 
             {/* Supporting text */}
-            <p className="text-lg sm:text-xl text-white/95 mb-8 max-w-2xl leading-relaxed">
-            Empowering ITGNC and LBQ individuals through rights-based advocacy, inclusive SRHR education, economic justice, and creative expression that centers healing and communal care.
+            <p className="text-base sm:text-xl text-white/95 mb-8 max-w-2xl leading-relaxed">
+              Empowering ITGNC and LBQ individuals through rights-based advocacy, inclusive SRHR education, economic justice, and creative expression that centers healing and communal care.
             </p>
           </div>
 
           {/* Right side - Carousel */}
-          <div className="relative h-[500px] lg:h-[600px]">
+          <div className="relative h-[350px] sm:h-[500px] lg:h-[600px]">
             <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl">
               {/* Carousel images */}
               <div className="relative w-full h-full">
                 {images.map((src, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 transition-opacity duration-500 ${
-                      index === currentIndex ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`absolute inset-0 transition-opacity duration-500 ${index === currentIndex ? "opacity-100" : "opacity-0"
+                      }`}
                   >
                     <Image
                       src={src}
@@ -111,9 +110,8 @@ export default function Hero() {
                   <button
                     key={index}
                     onClick={() => goToSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      index === currentIndex ? "bg-white w-8" : "bg-white/50"
-                    }`}
+                    className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? "bg-white w-8" : "bg-white/50"
+                      }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
                 ))}

@@ -1,7 +1,7 @@
 // Contact section with contact information and email signup
 // Provides ways for visitors to connect with the organization
 
-import {HandCoins, Handshake, Megaphone, Briefcase, Twitter, X, Facebook, FacebookIcon, InstagramIcon, XIcon, MapPinIcon, PhoneIcon, MailIcon } from 'lucide-react'
+import { HandCoins, Handshake, Megaphone, Briefcase, Twitter, X, Facebook, FacebookIcon, InstagramIcon, XIcon, MapPinIcon, PhoneIcon, MailIcon } from 'lucide-react'
 
 export default function Contact() {
   return (
@@ -15,13 +15,13 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {/* Fundraise */}
-          <div className="bg-white text-[#1A1A2E] p-6 rounded-lg shadow-lg">
+          <div className="bg-white text-[#1A1A2E] p-6 rounded-2xl md:rounded-lg shadow-lg">
             <div className="flex items-center justify-center mb-4">
-            <HandCoins size={36} />
-            <h3 className="text-xl font-bold ml-4 mb-3">Be a fundraiser.</h3>
+              <HandCoins size={36} />
+              <h3 className="text-xl font-bold ml-4 mb-3">Be a fundraiser.</h3>
             </div>
             <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-              Start your own fundraiser and invite friends, family, and social channels to raise money 
+              Start your own fundraiser and invite friends, family, and social channels to raise money
               and awareness in support of our cause.
             </p>
             <a
@@ -33,12 +33,12 @@ export default function Contact() {
           </div>
 
           {/* Advocate */}
-          <div className="bg-white text-[#1A1A2E] p-6 rounded-lg shadow-lg">
-          <div className="flex items-center justify-center mb-4">
+          <div className="bg-white text-[#1A1A2E] p-6 rounded-2xl md:rounded-lg shadow-lg">
             <div className="flex items-center justify-center mb-4">
-            <Megaphone size={36} />
-            </div>
-            <h3 className="text-xl font-bold ml-2 mb-3">Advocate for change.</h3>
+              <div className="flex items-center justify-center mb-4">
+                <Megaphone size={36} />
+              </div>
+              <h3 className="text-xl font-bold ml-2 mb-3">Advocate for change.</h3>
             </div>
             <p className="text-gray-700 mb-4 text-sm leading-relaxed">
               We&apos;re dedicated to advocating for ITGNC and LBQ young people. Join us and learn how you can help.
@@ -52,15 +52,15 @@ export default function Contact() {
           </div>
 
           {/* Volunteer */}
-          <div className="bg-white text-[#1A1A2E] p-6 rounded-lg shadow-lg">
-          
+          <div className="bg-white text-[#1A1A2E] p-6 rounded-2xl md:rounded-lg shadow-lg">
+
             <div className="flex items-center justify-center mb-4">
-            <Handshake size={36} />
-            
-            <h3 className="text-xl font-bold ml-2 mb-3">Volunteer your time.</h3>
+              <Handshake size={36} />
+
+              <h3 className="text-xl font-bold ml-2 mb-3">Volunteer your time.</h3>
             </div>
             <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-              Our volunteer support team is on the front lines of our mission. We rely on our volunteers 
+              Our volunteer support team is on the front lines of our mission. We rely on our volunteers
               to help us provide essential support.
             </p>
             <a
@@ -72,14 +72,14 @@ export default function Contact() {
           </div>
 
           {/* Work */}
-          <div className="bg-white text-[#1A1A2E] p-6 rounded-lg shadow-lg">
+          <div className="bg-white text-[#1A1A2E] p-6 rounded-2xl md:rounded-lg shadow-lg">
             <div className="flex items-center justify-center mb-4">
-            <Briefcase size={36} />
-            
-            <h3 className="text-xl font-bold ml-2 mb-3">Work at Q We Rise Network.</h3>
+              <Briefcase size={36} />
+
+              <h3 className="text-xl font-bold ml-2 mb-3">Work at Q We Rise Network.</h3>
             </div>
             <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-              We are always looking for smart, passionate, and diverse people to join our team. 
+              We are always looking for smart, passionate, and diverse people to join our team.
               Learn more about open roles and apply today!
             </p>
             <a
@@ -92,13 +92,13 @@ export default function Contact() {
         </div>
 
         {/* Contact Information */}
-        <div className="bg-white text-[#1A1A2E] p-8 rounded-lg shadow-lg max-w-4xl mx-auto mb-12">
+        <div className="bg-white text-[#1A1A2E] p-8 rounded-2xl md:rounded-lg shadow-lg max-w-4xl mx-auto mb-12">
           <h3 className="text-3xl font-bold mb-8 text-center">Get in Touch</h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="flex items-center justify-center mb-4"><MailIcon size={24} /></div>
               <p className="text-sm text-gray-600 mb-2">Email</p>
-              <a 
+              <a
                 href="mailto:info@qwerise.org"
                 className="text-[#7B2CBF] hover:text-[#6A1BB0] font-medium"
               >
@@ -108,11 +108,11 @@ export default function Contact() {
             <div>
               <div className="flex items-center justify-center mb-4"><PhoneIcon size={24} /></div>
               <p className="text-sm text-gray-600 mb-2">Phone</p>
-              <a 
+              <a
                 href="tel:+254727776506"
                 className="text-[#7B2CBF] hover:text-[#6A1BB0] font-medium"
               >
-                 +254 714 254 097
+                +254 714 254 097
               </a>
             </div>
             <div>
@@ -124,7 +124,7 @@ export default function Contact() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="bg-white text-[#1A1A2E] p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+        <div className="bg-white text-[#1A1A2E] p-8 rounded-2xl md:rounded-lg shadow-lg max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold mb-4 text-center">Join Our Newsletter</h3>
           <form className="flex flex-col sm:flex-row gap-4" aria-label="Email signup form">
             <input
@@ -132,13 +132,13 @@ export default function Contact() {
               id="email"
               name="email"
               required
-              className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7B2CBF] focus:border-[#7B2CBF] text-[#1A1A2E]"
+              className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-2xl md:rounded-lg focus:ring-2 focus:ring-[#7B2CBF] focus:border-[#7B2CBF] text-[#1A1A2E]"
               placeholder="Email Address"
               aria-describedby="email-privacy"
             />
             <button
               type="submit"
-              className="px-8 py-3 bg-[#7B2CBF] hover:bg-[#6A1BB0] text-white font-bold rounded-lg transition-colors"
+              className="px-8 py-3 bg-[#7B2CBF] hover:bg-[#6A1BB0] text-white font-bold rounded-2xl md:rounded-lg transition-colors"
             >
               Subscribe
             </button>
