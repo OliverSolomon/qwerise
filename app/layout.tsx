@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Q We Rise Network",
     images: [
       {
-        url: "/Q We Rise Transparent logo.png",
+        url: "/logo-optimized.png",
         width: 1200,
         height: 630,
         alt: "Q We Rise Network Logo - Feminist organization advancing rights for ITGNC and LBQ communities in Kenya",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Q We Rise Network - Advancing Rights for ITGNC & LBQ Communities",
     description: "A feminist, Kenyan-based organization empowering ITGNC and LBQ individuals through rights-based advocacy, inclusive SRHR education, economic justice, and creative expression.",
-    images: ["/Q We Rise Transparent logo.png"],
+    images: ["/logo-optimized.png"],
     creator: "@QWeRiseNetwork",
     site: "@QWeRiseNetwork",
   },
@@ -79,18 +79,18 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Favicon */}
-        <link rel="icon" type="image/png" sizes="32x32" href="/Q We Rise Transparent logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/Q We Rise Transparent logo.png" />
-        <link rel="apple-touch-icon" href="/Q We Rise Transparent logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo-optimized.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo-optimized.png" />
+        <link rel="apple-touch-icon" href="/logo-optimized.png" />
 
         {/* Additional meta tags for better social sharing */}
-        <meta property="og:image:secure_url" content="/Q We Rise Transparent logo.png" />
+        <meta property="og:image:secure_url" content="/logo-optimized.png" />
         <meta name="twitter:domain" content="qwerise.org" />
         <meta name="twitter:url" content="https://qwerise.org" />
 
         {/* Alternative social media images */}
-        <meta property="og:image" content="/Q We Rise Transparent logo.png" />
-        <meta property="og:image:url" content="https://qwerise.org/Q We Rise Transparent logo.png" />
+        <meta property="og:image" content="/logo-optimized.png" />
+        <meta property="og:image:url" content="https://qwerise.org/logo-optimized.png" />
 
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#7B2CBF" />
@@ -112,7 +112,7 @@ export default function RootLayout({
               "name": "Q We Rise Network",
               "alternateName": "Q We Rise",
               "url": "https://qwerise.org",
-              "logo": "/Q We Rise Transparent logo.png",
+              "logo": "/logo-optimized.png",
               "description": "A feminist, Kenyan-based organization advancing gender equity, mental wellness, and sexual and reproductive health rights for ITGNC and LBQ communities.",
               "foundingDate": "2023",
               "address": {
