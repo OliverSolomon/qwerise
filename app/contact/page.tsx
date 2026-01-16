@@ -1,6 +1,4 @@
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Image from "next/image";
 import { Mail, Phone, Instagram, Heart } from "lucide-react";
 import NewsletterSection from "../components/NewsletterSection";
@@ -8,7 +6,6 @@ import NewsletterSection from "../components/NewsletterSection";
 export default function ContactPage() {
     return (
         <div className="min-h-screen bg-[#FFF5F1] overflow-x-hidden">
-            <Header />
 
             <main className="relative pt-24 pb-20">
 
@@ -98,7 +95,6 @@ export default function ContactPage() {
 
                 </div>
             </main>
-            <Footer />
         </div>
     );
 }

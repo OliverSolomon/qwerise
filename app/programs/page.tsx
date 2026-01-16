@@ -1,6 +1,3 @@
-
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollVideo from "../components/ScrollVideo";
@@ -8,7 +5,6 @@ import ScrollVideo from "../components/ScrollVideo";
 export default function ProgramsPage() {
     return (
         <div className="min-h-screen bg-[#FFF5F1] overflow-x-hidden">
-            <Header />
 
             {/* Hero Section - Similar to Homepage */}
             <section className="relative bg-[#FFF5F1] min-h-[500px] overflow-hidden pt-24">
@@ -312,7 +308,6 @@ export default function ProgramsPage() {
                     </div>
                 </div>
             </main>
-            <Footer />
         </div>
     );
 }

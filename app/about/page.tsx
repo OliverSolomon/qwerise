@@ -1,13 +1,9 @@
-
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Image from "next/image";
 import { Target, Eye, Sparkles, Palette, Handshake, Layers, Shield, Unlock, Camera, Mail, Phone, Instagram } from "lucide-react";
 
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-[#FFF5F1] overflow-x-hidden">
-            <Header />
 
             <main className="relative pt-24 pb-20">
 
@@ -216,8 +212,6 @@ export default function AboutPage() {
 
                 </div>
             </main>
-
-            <Footer />
         </div>
     );
 }

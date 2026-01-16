@@ -1,6 +1,4 @@
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Accordion from "../components/Accordion";
 import Image from "next/image";
 import { BookOpen, Ambulance, Mail } from "lucide-react";
@@ -31,7 +29,6 @@ const faqs = [
 export default function ResourcesPage() {
     return (
         <div className="min-h-screen bg-[#FFF5F1] overflow-x-hidden">
-            <Header />
 
             <main className="relative pt-24 pb-20">
 
@@ -132,7 +129,6 @@ export default function ResourcesPage() {
 
                 </div>
             </main >
-            <Footer />
         </div >
     );
 }
