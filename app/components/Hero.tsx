@@ -33,10 +33,10 @@ export default function Hero() {
 
             {/* CTA Button - Blue pill shape with arrow */}
             <a
-              href="/contact"
+              href="/programs"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#1A3A5C] text-white font-bold rounded-full hover:bg-[#0F2A42] transition-all transform hover:scale-105 shadow-lg text-base"
             >
-              Get in touch
+              See our programs
               <svg className="w-4 h-4 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

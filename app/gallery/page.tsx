@@ -3,8 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import GalleryGrid from "../components/GalleryGrid";
 
-const allImages = [
-    // Queers Got Talent
+const queersGotTalentImages = [
     "/queers-got-talent/5H0A0008.jpg",
     "/queers-got-talent/5H0A0192.jpg",
     "/queers-got-talent/5H0A0324.jpg",
@@ -31,11 +30,9 @@ const allImages = [
     "/queers-got-talent/DSC_0175.jpg",
     "/queers-got-talent/DSC_0267.jpg",
     "/queers-got-talent/DSC_0924.jpg",
-    // Note: Skipping BMP files for now as next/image optimization might be tricky or file size too large for web.
-    // "P1051621.MOV.02_13_37_44.Still002.bmp"
-    // "P1051634.MOV.02_17_07_10.Still004.bmp"
+];
 
-    // Gallery Events
+const galleryEventsImages = [
     "/queer-gallery-events/CRMCD-14.jpg",
     "/queer-gallery-events/CRMCD-16.jpg",
     "/queer-gallery-events/IMG-20250224-WA0005(1).jpg",
@@ -58,7 +55,7 @@ const allImages = [
 
 export default function GalleryPage() {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-[#FFF5F1]">
             <Header />
             <main className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
@@ -71,7 +68,40 @@ export default function GalleryPage() {
                         </p>
                     </div>
 
-                    <GalleryGrid images={allImages} />
+                    {/* Queers Got Talent Section */}
+                    <section className="mb-20">
+                        <div className="mb-8">
+                            <div className="inline-block px-4 py-1 bg-[#7B2CBF] text-white font-bold rounded-full text-sm mb-3">
+                                QUEERS GOT TALENT
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A2E]">
+                                Celebrating Queer <span className="text-[#7B2CBF]">Brilliance</span>
+                            </h2>
+                            <p className="text-gray-600 mt-2 max-w-2xl">Photos from our annual talent showcase celebrating the creativity and expression of our community.</p>
+                        </div>
+                        <GalleryGrid images={queersGotTalentImages} />
+                    </section>
+
+                    {/* Divider */}
+                    <div className="flex items-center gap-4 my-16">
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#7B2CBF]/30 to-transparent"></div>
+                        <div className="w-3 h-3 bg-[#7B2CBF] rounded-full"></div>
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#00B4A6]/30 to-transparent"></div>
+                    </div>
+
+                    {/* Gallery Events Section */}
+                    <section>
+                        <div className="mb-8">
+                            <div className="inline-block px-4 py-1 bg-[#00B4A6] text-white font-bold rounded-full text-sm mb-3">
+                                COMMUNITY EVENTS
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A2E]">
+                                Moments of <span className="text-[#00B4A6]">Connection</span>
+                            </h2>
+                            <p className="text-gray-600 mt-2 max-w-2xl">Snapshots from our community gatherings, wellness events, and advocacy activities.</p>
+                        </div>
+                        <GalleryGrid images={galleryEventsImages} />
+                    </section>
                 </div>
             </main>
             <Footer />
