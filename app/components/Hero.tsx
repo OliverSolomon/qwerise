@@ -1,121 +1,62 @@
 // Hero section with main message and call-to-action
-// Features the organization's mission and development status
+// Features the organization's mission with Programs-style card
 
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 export default function Hero() {
-  const images = [
-    "/carousel/carousel-1.jpg",
-    "/carousel/carousel-2.jpg",
-    "/carousel/carousel-3.jpg",
-    "/carousel/carousel-4.jpg",
-    "/carousel/carousel-5.jpg",
-    "/carousel/carousel-6.jpg",
-    "/carousel/carousel-7.bmp",
-    "/carousel/carousel-8.jpg",
-    "/carousel/carousel-9.jpg",
-    "/carousel/carousel-10.jpg",
-    "/carousel/carousel-11.jpg",
-    "/carousel/carousel-12.jpg",
-    "/carousel/carousel-13.jpg",
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000); // Change image every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
   return (
-    <section className="relative bg-[#FF6B35] text-white py-16 sm:py-24 lg:py-32 overflow-hidden min-h-[600px]">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative bg-[#FFF5F1] min-h-[600px] overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#FF6B35]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-[#1A3A5C]/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side - Text content */}
-          <div className="relative z-20">
+          <div className="text-center lg:text-left">
             {/* Main heading */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              You deserve a <span className="font-script text-5xl sm:text-7xl lg:text-8xl block mt-2">welcoming, loving world.</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A2E] mb-6 leading-tight">
+              You deserve a{" "}
+              <span className="font-script text-4xl sm:text-5xl lg:text-6xl block mt-2 text-[#1A1A2E]">
+                welcoming, loving world.
+              </span>
             </h1>
 
             {/* Supporting text */}
-            <p className="text-base sm:text-xl text-white/95 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-[#4A5568] mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
               Empowering ITGNC and LBQ individuals through rights-based advocacy, inclusive SRHR education, economic justice, and creative expression that centers healing and communal care.
             </p>
+
+            {/* CTA Button - Blue pill shape with arrow */}
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#1A3A5C] text-white font-bold rounded-full hover:bg-[#0F2A42] transition-all transform hover:scale-105 shadow-lg text-base"
+            >
+              Get in touch
+              <svg className="w-4 h-4 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
           </div>
 
-          {/* Right side - Carousel */}
-          <div className="relative h-[350px] sm:h-[500px] lg:h-[600px]">
-            <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl">
-              {/* Carousel images */}
-              <div className="relative w-full h-full">
-                {images.map((src, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 transition-opacity duration-500 ${index === currentIndex ? "opacity-100" : "opacity-0"
-                      }`}
-                  >
-                    <Image
-                      src={src}
-                      alt={`Queer artwork ${index + 1}`}
-                      fill
-                      className="object-cover"
-                      priority={index === 0}
-                    />
-                  </div>
-                ))}
-              </div>
+          {/* Right side - Image with fun purple-maroon shadow background */}
+          <div className="relative group flex justify-center lg:justify-end">
+            {/* Skewed animated purple-maroon shadow background - overflows to the right */}
+            <div className="absolute -top-2 -bottom-2 left-4 -right-4 bg-gradient-to-br from-[#C9A0DC] to-[#D4A5A5] rounded-2xl md:rounded-3xl rotate-[3deg] transition-transform group-hover:rotate-[5deg] shadow-lg"></div>
 
-              {/* Navigation arrows */}
-              <button
-                onClick={goToPrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors z-10"
-                aria-label="Previous image"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors z-10"
-                aria-label="Next image"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-
-              {/* Dots indicator */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? "bg-white w-8" : "bg-white/50"
-                      }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
+            {/* Image container - same size as background, sits on top */}
+            <div className="relative w-full max-w-xl h-96 sm:h-[28rem] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/queers-got-talent/trophy.bmp"
+                alt="Queers Got Talent Trophy - Celebrating LGBTQ+ talent and creativity"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>

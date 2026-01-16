@@ -39,8 +39,8 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Single orange navigation bar */}
-      <div className="bg-[#FF6B35] text-white shadow-md">
+      {/* Light navigation bar matching reference design */}
+      <div className="bg-gradient-to-r from-[#faf8f5] to-[#f5f3f0] shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo on the left */}
@@ -54,8 +54,8 @@ export default function Header() {
                 priority
               />
               <div className="flex flex-col">
-                <span className="text-sm font-bold uppercase leading-tight group-hover:text-white/90">Q We</span>
-                <span className="text-lg font-bold uppercase leading-tight group-hover:text-white/90">Rise Network</span>
+                <span className="text-sm font-bold uppercase leading-tight text-[#1A1A2E] group-hover:text-[#FF6B35]">Q We</span>
+                <span className="text-lg font-bold uppercase leading-tight text-[#1A1A2E] group-hover:text-[#FF6B35]">Rise Network</span>
               </div>
             </Link>
 
@@ -65,7 +65,7 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-sm font-bold transition-colors hover:text-[#1A1A2E] ${isActive(link.href) ? 'text-[#1A1A2E]' : 'text-white'}`}
+                  className={`text-sm font-semibold transition-colors hover:text-[#FF6B35] ${isActive(link.href) ? 'text-[#FF6B35]' : 'text-[#1A3A5C]'}`}
                 >
                   {link.name}
                 </Link>
@@ -73,9 +73,12 @@ export default function Header() {
 
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-[#1A1A2E] text-white font-bold rounded-lg hover:bg-[#2A2A3E] transition-all transform hover:scale-105 shadow-md text-sm border-2 border-transparent hover:border-[#7B2CBF] ml-4"
+                className="px-6 py-2.5 bg-[#FF6B35] text-white font-bold rounded-full hover:bg-[#E85A2A] transition-all transform hover:scale-105 shadow-md text-sm flex items-center gap-2 ml-4"
               >
                 Donate
+                <svg className="w-4 h-4 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </Link>
             </nav>
 
@@ -83,7 +86,7 @@ export default function Header() {
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
-                className="p-2 rounded-md text-white hover:bg-white/10 focus:outline-none"
+                className="p-2 rounded-md text-[#1A3A5C] hover:bg-[#1A3A5C]/10 focus:outline-none"
                 aria-expanded={isMenuOpen}
                 aria-label="Toggle navigation menu"
               >
@@ -95,13 +98,13 @@ export default function Header() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-[#FF6B35] border-t border-white/10">
+          <div className="md:hidden bg-gradient-to-r from-[#faf8f5] to-[#f5f3f0] border-t border-[#1A3A5C]/10">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`block px-3 py-2 rounded-md text-base font-bold transition-colors ${isActive(link.href) ? 'bg-[#1A1A2E] text-white' : 'text-white hover:bg-white/10 hover:text-white'}`}
+                  className={`block px-3 py-2 rounded-md text-base font-bold transition-colors ${isActive(link.href) ? 'bg-[#FF6B35] text-white' : 'text-[#1A3A5C] hover:bg-[#1A3A5C]/10'}`}
                   onClick={closeMenu}
                 >
                   {link.name}
@@ -109,10 +112,13 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="block w-full text-center mt-4 px-5 py-3 bg-[#1A1A2E] text-white font-bold rounded-lg hover:bg-[#2A2A3E] transition-all shadow-md text-base"
+                className="flex items-center justify-center gap-2 w-full mt-4 px-5 py-3 bg-[#FF6B35] text-white font-bold rounded-full hover:bg-[#E85A2A] transition-all shadow-md text-base"
                 onClick={closeMenu}
               >
                 Donate
+                <svg className="w-4 h-4 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </Link>
             </div>
           </div>
