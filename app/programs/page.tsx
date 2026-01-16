@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollVideo from "../components/ScrollVideo";
 
 export default function ProgramsPage() {
     return (
@@ -47,6 +48,7 @@ export default function ProgramsPage() {
                                             alt="Queer portrait"
                                             fill
                                             className="object-cover"
+                                            priority
                                         />
                                     </div>
                                 </div>
@@ -59,6 +61,7 @@ export default function ProgramsPage() {
                                             alt="Community celebration"
                                             fill
                                             className="object-cover"
+                                            priority
                                         />
                                     </div>
                                 </div>
@@ -103,12 +106,8 @@ export default function ProgramsPage() {
                                     {/* Predominant Video Recap */}
                                     <div className="lg:col-span-12 relative">
                                         <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video group/video">
-                                            <video
+                                            <ScrollVideo
                                                 src="/qgt-highlights-compressed.mp4"
-                                                autoPlay
-                                                loop
-                                                muted
-                                                playsInline
                                                 className="w-full h-full object-cover"
                                                 poster="/queers-got-talent/trophy.png"
                                             />

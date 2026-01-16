@@ -1,4 +1,6 @@
 
+import ScrollVideo from "./ScrollVideo";
+
 export default function QueersGotTalentVideo() {
     return (
         <div className="bg-white py-16 overflow-hidden">
@@ -14,19 +16,14 @@ export default function QueersGotTalentVideo() {
             {/* Video */}
             <div className="w-full px-4 sm:px-0">
                 <div className="relative w-full aspect-video sm:aspect-[21/9] max-h-[80vh] overflow-hidden">
-                    <video
+                    <ScrollVideo
+                        src="https://media.qwerise.org/qgt-highlights-compressed.mp4"
                         className="w-full h-full object-cover"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                    >
-                        <source src="https://media.qwerise.org/qgt-highlights-compressed.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                    />
                     <div className="absolute inset-0 shadow-inner pointer-events-none"></div>
                 </div>
             </div>
         </div>
     );
 }
+
