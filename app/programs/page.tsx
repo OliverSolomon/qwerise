@@ -110,14 +110,14 @@ export default function ProgramsPage() {
                                                 muted
                                                 playsInline
                                                 className="w-full h-full object-cover"
-                                                poster="/queers-got-talent/trophy.bmp"
+                                                poster="/queers-got-talent/trophy.png"
                                             />
                                             <div className="absolute inset-0 bg-transparent pointer-events-none border-[12px] border-white/5 rounded-3xl"></div>
                                         </div>
                                         {/* Trophy Image as a decorative sticker/card overlap */}
                                         <div className="absolute -bottom-8 -right-8 w-40 h-40 hidden md:block rotate-12 transition-transform group-hover:rotate-[15deg]">
                                             <div className="relative w-full h-full p-2 bg-white shadow-2xl rounded-2xl transform rotate-3">
-                                                <Image src="/queers-got-talent/trophy.bmp" alt="QGT Trophy" fill className="object-cover rounded-xl" />
+                                                <Image src="/queers-got-talent/trophy.png" alt="QGT Trophy" fill className="object-cover rounded-xl" />
                                             </div>
                                         </div>
                                     </div>

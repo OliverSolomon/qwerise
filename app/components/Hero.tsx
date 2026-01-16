@@ -51,7 +51,7 @@ export default function Hero() {
             {/* Image container - same size as background, sits on top */}
             <div className="relative w-full max-w-xl h-96 sm:h-[28rem] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/queers-got-talent/trophy.bmp"
+                src="/queers-got-talent/trophy.png"
                 alt="Queers Got Talent Trophy - Celebrating LGBTQ+ talent and creativity"
                 fill
                 className="object-cover"
