@@ -90,13 +90,19 @@ export default function ProgramsPage() {
                                             STORYTELLING & DOCUMENTING
                                         </div>
                                         <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A2E]">
-                                            Queers Got Talent: <span className="text-[#7B2CBF]">Third Edition</span>
+                                            Queers Got Talent: <span className="text-[#7B2CBF]">Africanizing our Queer Cultures</span>
                                         </h2>
-                                        <p className="text-lg text-gray-700 leading-relaxed">
-                                            Queers Got Talent is an annual program by Q We Rise, launched in 2023 with the support of Hivos under the Free to Be Me initiative.
-                                            The event offers a safe, affirming space for expression and aims to grow beyond Kenya into broader African and global platforms.
-                                            This third edition continues our legacy of celebrating queer brilliance.
-                                        </p>
+                                        <div className="space-y-4 text-lg text-gray-700 leading-relaxed text-left max-w-3xl mx-auto">
+                                            <p>
+                                                <strong>Queers Got Talent (QGT)</strong> is an annual arts and advocacy program that creates safe, visible, and empowering platforms for queer and gender-diverse artists in Kenya. Through performance, storytelling, and creative expression, QGT challenges harmful stereotypes, counters anti-rights narratives, and amplifies the voices of marginalized communities.
+                                            </p>
+                                            <p>
+                                                The <strong>third edition</strong> was held under the theme <strong>&ldquo;Africanizing our queer cultures,&rdquo;</strong> recognizing creativity as a powerful tool to counter anti-rights movements targeting LGBTQI+ and intersex persons in Kenya. This edition intentionally centered art as a form of political expression and community healing.
+                                            </p>
+                                            <p>
+                                                Through music, spoken word, dance, visual art, and storytelling, we use our talents to reclaim spaces, affirm identity, and resist policies and ideologies that threaten bodily autonomy and human rights. QGT continues to serve as both an artistic showcase and a movement-building space where talent meets activism, and visibility becomes power.
+                                            </p>
+                                        </div>
                                     </div>
 
                                     {/* Predominant Video Recap */}
@@ -136,8 +142,15 @@ export default function ProgramsPage() {
                         {/* Intersex Awareness Section */}
                         <div className="space-y-24">
                             <div className="text-center">
-                                <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A2E] mb-4">Intersex <span className="text-[#00B4A6]">Awareness</span></h2>
-                                <p className="text-lg text-gray-600 max-w-2xl mx-auto">Initiatives focused on visibility, health rights, and advocacy for intersex individuals.</p>
+                                <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A2E] mb-6">Intersex <span className="text-[#00B4A6]">Awareness</span></h2>
+                                <div className="text-lg text-gray-700 max-w-3xl mx-auto space-y-4">
+                                    <p>
+                                        Our Intersex Programs are designed to increase visibility, promote bodily autonomy, and advocate for inclusive healthcare, mental well-being, and social justice for intersex persons. Rooted in lived experiences, our work challenges systemic harm while creating spaces for healing, empowerment, and leadership.
+                                    </p>
+                                    <p>
+                                        We implement our programs across <strong>grassroots, national, and global platforms</strong>, using both online and offline approaches to ensure intersex voices are heard, protected, and amplified.
+                                    </p>
+                                </div>
                             </div>
 
                             {/* Awareness Day */}
@@ -157,8 +170,9 @@ export default function ProgramsPage() {
                                     </div>
                                     <div className="w-full md:w-1/2 space-y-4">
                                         <div className="inline-block px-3 py-1 bg-yellow-400 text-white font-bold rounded-full text-xs uppercase">Awareness Day</div>
-                                        <h3 className="text-2xl font-bold text-[#1A1A2E]">Yellow and Purple <span className="text-yellow-500">Solidarity</span></h3>
-                                        <p className="text-gray-700">Celebrating Intersex Awareness Day with vibrant community gatherings, centering our unique experiences and demands for human rights.</p>
+                                        <h3 className="text-2xl font-bold text-[#1A1A2E]">Intersex <span className="text-yellow-500">Awareness Day</span></h3>
+                                        <p className="text-gray-700">Spotlighting intersex realities and demanding dignity. We focus on challenging stigma, myths, and harmful medical practices—including non-consensual interventions—by centering intersex voices through storytelling, advocacy, and community-led dialogue.</p>
+                                        <p className="text-gray-600 text-sm">Through digital campaigns and grassroots outreach, we ensure intersex narratives are visible online and globally beyond single-day commemorations.</p>
                                     </div>
                                 </div>
                             </section>
@@ -168,27 +182,24 @@ export default function ProgramsPage() {
                                 {/* Access to Health */}
                                 <section className="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-[#7B2CBF] relative group overflow-hidden">
                                     <div className="absolute top-0 right-0 w-24 h-24 bg-[#7B2CBF]/5 rounded-bl-full"></div>
-                                    <h3 className="text-2xl font-bold mb-4 text-[#1A1A2E]">Health Access Program</h3>
-                                    <p className="text-gray-700 mb-6">Focusing on dismantling systemic barriers to essential healthcare for intersex individuals. We work to ensure access to affirming, informed, and non-coercive medical care.</p>
+                                    <h3 className="text-2xl font-bold mb-4 text-[#1A1A2E]">Intersex Access to Health</h3>
+                                    <p className="text-gray-700 mb-6">Addressing systemic barriers to inclusive and ethical healthcare. We challenge non-consensual medical interventions and advocate for respectful, informed, and rights-based health services for intersex persons.</p>
                                     <div className="relative h-48 rounded-2xl overflow-hidden">
                                         <Image src="/queer artwork/ribbon swirl.webp" alt="Health Program" fill className="object-cover" />
                                     </div>
                                 </section>
 
-                                {/* Awareness Outreach */}
-                                <section className="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-[#00B4A6] relative group overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-24 h-24 bg-[#00B4A6]/5 rounded-bl-full"></div>
-                                    <h3 className="text-2xl font-bold mb-4 text-[#1A1A2E]">Awareness Outreach</h3>
-                                    <p className="text-gray-700 mb-6">Connecting with communities in informal settlements through grassroots organizing and education. Our outreach teams work to challenge stigma at the local level.</p>
-                                    <div className="grid grid-cols-3 gap-2 h-48">
-                                        <div className="relative rounded-xl overflow-hidden">
-                                            <Image src="/queer-gallery-events/CRMCD-14.jpg" alt="Outreach" fill className="object-cover" />
+                                {/* Empowerment & Opportunities */}
+                                <section className="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-[#FF6B35] relative group overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-24 h-24 bg-[#FF6B35]/5 rounded-bl-full"></div>
+                                    <h3 className="text-2xl font-bold mb-4 text-[#1A1A2E]">Intersex Empowerment</h3>
+                                    <p className="text-gray-700 mb-6">Intentional opportunities for intersex persons including leadership support, skills-building, and economic empowerment. We focus on strengthening safe spaces that foster confidence, resilience, and collective power.</p>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="bg-orange-50 p-4 rounded-xl border border-orange-100 italic text-sm text-gray-600">
+                                            "A future where intersex persons live with autonomy, dignity, and equal access."
                                         </div>
-                                        <div className="relative rounded-xl overflow-hidden">
-                                            <Image src="/queer artwork/lgbtqueer.webp" alt="LGBTQ" fill className="object-cover" />
-                                        </div>
-                                        <div className="relative rounded-xl overflow-hidden">
-                                            <Image src="/queer-gallery-events/CRMCD-16.jpg" alt="Outreach" fill className="object-cover" />
+                                        <div className="relative rounded-xl overflow-hidden shadow-sm">
+                                            <Image src="/queer-gallery-events/CRMCD-14.jpg" alt="Leadership" fill className="object-cover" />
                                         </div>
                                     </div>
                                 </section>
