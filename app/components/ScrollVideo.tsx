@@ -63,7 +63,7 @@ export default function ScrollVideo({
             muted={muted}
             loop={loop}
             playsInline={playsInline}
-            preload="none" // Don't preload until necessary
+            preload="metadata"
         />
     );
 }

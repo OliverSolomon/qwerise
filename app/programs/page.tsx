@@ -85,7 +85,25 @@ export default function ProgramsPage() {
 
                             <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-purple-50 overflow-hidden">
                                 <div className="grid lg:grid-cols-12 gap-12 items-center">
-                                    <div className="lg:col-span-12 space-y-6 text-center max-w-4xl mx-auto">
+                                    {/* Predominant Video Recap - Moved to top of section for showcasing */}
+                                    <div className="lg:col-span-12 relative order-first lg:order-none mb-4">
+                                        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video group/video">
+                                            <ScrollVideo
+                                                src="/qgt-highlights-compressed.mp4"
+                                                className="w-full h-full object-cover"
+                                                poster="/queers-got-talent/trophy.png"
+                                            />
+                                            <div className="absolute inset-0 bg-transparent pointer-events-none border-[12px] border-white/5 rounded-3xl"></div>
+                                        </div>
+                                        {/* Trophy Image as a decorative sticker/card overlap */}
+                                        <div className="absolute -bottom-8 -right-8 w-40 h-40 hidden md:block rotate-12 transition-transform group-hover:rotate-[15deg] z-20">
+                                            <div className="relative w-full h-full p-2 bg-white shadow-2xl rounded-2xl transform rotate-3">
+                                                <Image src="/queers-got-talent/trophy.png" alt="QGT Trophy" fill className="object-cover rounded-xl" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="lg:col-span-12 space-y-6 text-center max-w-4xl mx-auto mt-8">
                                         <div className="inline-block px-4 py-1 bg-[#7B2CBF] text-white font-bold rounded-full text-sm mb-2">
                                             STORYTELLING & DOCUMENTING
                                         </div>
@@ -102,24 +120,6 @@ export default function ProgramsPage() {
                                             <p>
                                                 Through music, spoken word, dance, visual art, and storytelling, we use our talents to reclaim spaces, affirm identity, and resist policies and ideologies that threaten bodily autonomy and human rights. QGT continues to serve as both an artistic showcase and a movement-building space where talent meets activism, and visibility becomes power.
                                             </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Predominant Video Recap */}
-                                    <div className="lg:col-span-12 relative">
-                                        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video group/video">
-                                            <ScrollVideo
-                                                src="/qgt-highlights-compressed.mp4"
-                                                className="w-full h-full object-cover"
-                                                poster="/queers-got-talent/trophy.png"
-                                            />
-                                            <div className="absolute inset-0 bg-transparent pointer-events-none border-[12px] border-white/5 rounded-3xl"></div>
-                                        </div>
-                                        {/* Trophy Image as a decorative sticker/card overlap */}
-                                        <div className="absolute -bottom-8 -right-8 w-40 h-40 hidden md:block rotate-12 transition-transform group-hover:rotate-[15deg]">
-                                            <div className="relative w-full h-full p-2 bg-white shadow-2xl rounded-2xl transform rotate-3">
-                                                <Image src="/queers-got-talent/trophy.png" alt="QGT Trophy" fill className="object-cover rounded-xl" />
-                                            </div>
                                         </div>
                                     </div>
 
