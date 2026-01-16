@@ -112,7 +112,7 @@ export default function ProgramsPage() {
                                         </h2>
                                         <div className="space-y-4 text-lg text-gray-700 leading-relaxed text-left max-w-3xl mx-auto">
                                             <p>
-                                                <strong>Queers Got Talent (QGT)</strong> is an annual arts and advocacy program that creates safe, visible, and empowering platforms for queer and gender-diverse artists in Kenya. Through performance, storytelling, and creative expression, QGT challenges harmful stereotypes, counters anti-rights narratives, and amplifies the voices of marginalized communities.
+                                                <strong>Queers Got Talent </strong> is an annual arts and advocacy program that creates safe, visible, and empowering platforms for queer and gender-diverse artists in Kenya. Through performance, storytelling, and creative expression, QGT challenges harmful stereotypes, counters anti-rights narratives, and amplifies the voices of marginalized communities.
                                             </p>
                                             <p>
                                                 The <strong>third edition</strong> was held under the theme <strong>&ldquo;Africanizing our queer cultures,&rdquo;</strong> recognizing creativity as a powerful tool to counter anti-rights movements targeting LGBTQI+ and intersex persons in Kenya. This edition intentionally centered art as a form of political expression and community healing.
