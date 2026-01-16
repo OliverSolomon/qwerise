@@ -16,7 +16,7 @@ This edition intentionally centered:
 
 Through music, spoken word, dance, visual art, and storytelling, We use our talents to reclaim spaces, affirm identity, and resist policies and ideologies that threaten bodily autonomy and human rights.
 
-QGT continues to serve as both an artistic showcase and a movement-building space where talent meets activism, and visibility becomes power.
+Queers Got Talent continues to serve as both an artistic showcase and a movement-building space where talent meets activism, and visibility becomes power.
 
 **Intersex Programs**
 

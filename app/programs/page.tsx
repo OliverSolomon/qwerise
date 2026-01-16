@@ -98,7 +98,7 @@ export default function ProgramsPage() {
                                         {/* Trophy Image as a decorative sticker/card overlap */}
                                         <div className="absolute -bottom-8 -right-8 w-40 h-40 hidden md:block rotate-12 transition-transform group-hover:rotate-[15deg] z-20">
                                             <div className="relative w-full h-full p-2 bg-white shadow-2xl rounded-2xl transform rotate-3">
-                                                <Image src="/queers-got-talent/trophy.png" alt="QGT Trophy" fill className="object-cover rounded-xl" />
+                                                <Image src="/queers-got-talent/trophy.png" alt="Queers Got Talent Trophy" fill className="object-cover rounded-xl" />
                                             </div>
                                         </div>
                                     </div>
@@ -112,13 +112,13 @@ export default function ProgramsPage() {
                                         </h2>
                                         <div className="space-y-4 text-lg text-gray-700 leading-relaxed text-left max-w-3xl mx-auto">
                                             <p>
-                                                <strong>Queers Got Talent </strong> is an annual arts and advocacy program that creates safe, visible, and empowering platforms for queer and gender-diverse artists in Kenya. Through performance, storytelling, and creative expression, QGT challenges harmful stereotypes, counters anti-rights narratives, and amplifies the voices of marginalized communities.
+                                                <strong>Queers Got Talent </strong> is an annual arts and advocacy program that creates safe, visible, and empowering platforms for queer and gender-diverse artists in Kenya. Through performance, storytelling, and creative expression, Queers Got Talet challenges harmful stereotypes, counters anti-rights narratives, and amplifies the voices of marginalized communities.
                                             </p>
                                             <p>
                                                 The <strong>third edition</strong> was held under the theme <strong>&ldquo;Africanizing our queer cultures,&rdquo;</strong> recognizing creativity as a powerful tool to counter anti-rights movements targeting LGBTQI+ and intersex persons in Kenya. This edition intentionally centered art as a form of political expression and community healing.
                                             </p>
                                             <p>
-                                                Through music, spoken word, dance, visual art, and storytelling, we use our talents to reclaim spaces, affirm identity, and resist policies and ideologies that threaten bodily autonomy and human rights. QGT continues to serve as both an artistic showcase and a movement-building space where talent meets activism, and visibility becomes power.
+                                                Through music, spoken word, dance, visual art, and storytelling, we use our talents to reclaim spaces, affirm identity, and resist policies and ideologies that threaten bodily autonomy and human rights. Queers Got Talent continues to serve as both an artistic showcase and a movement-building space where talent meets activism, and visibility becomes power.
                                             </p>
                                         </div>
                                     </div>
