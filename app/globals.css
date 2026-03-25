@@ -47,3 +47,33 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Accessibility Styles */
+html.high-contrast {
+  filter: contrast(150%) saturate(150%) hue-rotate(5deg);
+}
+
+html.grayscale-mode {
+  filter: grayscale(100%);
+}
+
+html.text-large {
+  font-size: 110%;
+}
+
+html.text-extra-large {
+  font-size: 130%;
+}
+
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.001s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001s !important;
+  scroll-behavior: auto !important;
+}
+
+html.dyslexia-font, html.dyslexia-font * {
+  font-family: 'Comic Sans MS', 'OpenDyslexic', sans-serif !important;
+}

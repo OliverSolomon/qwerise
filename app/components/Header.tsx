@@ -71,15 +71,17 @@ export default function Header() {
                 </Link>
               ))}
 
-              <Link
-                href="/contact"
+              <a
+                href="https://www.mchanga.africa/fundraiser/114347"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-2.5 bg-[#FF6B35] text-white font-bold rounded-full hover:bg-[#E85A2A] transition-all transform hover:scale-105 shadow-md text-sm flex items-center gap-2 ml-4"
               >
                 Donate
                 <svg className="w-4 h-4 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </Link>
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -110,8 +112,10 @@ export default function Header() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
+              <a
+                href="https://www.mchanga.africa/fundraiser/114347"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full mt-4 px-5 py-3 bg-[#FF6B35] text-white font-bold rounded-full hover:bg-[#E85A2A] transition-all shadow-md text-base"
                 onClick={closeMenu}
               >
@@ -119,7 +123,7 @@ export default function Header() {
                 <svg className="w-4 h-4 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         )}
