@@ -20,9 +20,9 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             {/* Main heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A2E] mb-6 leading-tight">
-              You deserve a{" "}
-              <span className="font-script text-4xl sm:text-5xl lg:text-6xl block mt-2 text-[#1A1A2E]">
-                welcoming, loving world.
+              Rising Together{" "}
+              <span className="font-medium tracking-tight text-3xl sm:text-4xl lg:text-5xl block mt-3 text-[#EC4899]">
+                for bodily autonomy, rights, and dignity.
               </span>
             </h1>
 

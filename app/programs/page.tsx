@@ -23,7 +23,7 @@ export default function ProgramsPage() {
                             </div>
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A2E] mb-6 leading-tight">
                                 Empowering{" "}
-                                <span className="font-script text-4xl sm:text-5xl lg:text-6xl block mt-2 text-[#7B2CBF]">
+                                <span className="font-script text-4xl sm:text-5xl lg:text-6xl block mt-2 text-[#EC4899]">
                                     our community.
                                 </span>
                             </h1>
@@ -32,34 +32,20 @@ export default function ProgramsPage() {
                             </p>
                         </div>
 
-                        {/* Right side - Stacked skewed photos */}
+                        {/* Right side - Single Hero Landscape Image */}
                         <div className="relative flex justify-center lg:justify-end">
-                            <div className="relative w-full max-w-md h-[400px]">
-                                {/* Back photo - queer portrait */}
-                                <div className="absolute top-0 left-0 w-64 h-80 rotate-[-8deg] z-10 group">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-[#7B2CBF] to-[#FF6B35] rounded-2xl rotate-[3deg] -z-10 shadow-xl"></div>
-                                    <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
-                                        <Image
-                                            src="/queer artwork/queer portrait.webp"
-                                            alt="Queer portrait"
-                                            fill
-                                            className="object-cover"
-                                            priority
-                                        />
-                                    </div>
-                                </div>
-                                {/* Front photo - community event */}
-                                <div className="absolute top-20 right-0 w-64 h-80 rotate-[6deg] z-20 group">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-[#00B4A6] to-[#7B2CBF] rounded-2xl rotate-[-3deg] -z-10 shadow-xl"></div>
-                                    <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
-                                        <Image
-                                            src="/queers-got-talent/DSC_0023.jpg"
-                                            alt="Community celebration"
-                                            fill
-                                            className="object-cover"
-                                            priority
-                                        />
-                                    </div>
+                            <div className="relative w-full max-w-xl group">
+                                {/* Decorative shadow behind the photo */}
+                                <div className="absolute -top-4 -bottom-4 left-6 -right-6 bg-gradient-to-br from-[#EC4899]/20 to-[#FF6B35]/20 rounded-3xl rotate-[2deg] transition-transform group-hover:rotate-[3deg] -z-10"></div>
+                                
+                                <div className="relative aspect-[3/2] rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white">
+                                    <Image
+                                        src="/queer artwork/new/activity.jpeg"
+                                        alt="Q We Rise Activity"
+                                        fill
+                                        className="object-cover transition-transform group-hover:scale-105 duration-500"
+                                        priority
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -108,7 +94,7 @@ export default function ProgramsPage() {
                                             STORYTELLING & DOCUMENTING
                                         </div>
                                         <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A2E]">
-                                            Queers Got Talent: <span className="text-[#7B2CBF]">Africanizing our Queer Cultures</span>
+                                            Queers Got Talent: <span className="text-[#EC4899]">Africanizing our Queer Cultures</span>
                                         </h2>
                                         <div className="space-y-4 text-lg text-gray-700 leading-relaxed text-left max-w-3xl mx-auto">
                                             <p>
@@ -126,7 +112,7 @@ export default function ProgramsPage() {
                                     {/* View Gallery Button */}
                                     <div className="lg:col-span-12 text-center">
                                         <Link
-                                            href="/gallery"
+                                            href="#"
                                             className="inline-flex items-center gap-3 px-8 py-4 bg-[#7B2CBF] text-white font-bold rounded-full hover:bg-[#6B1FAF] transition-all transform hover:scale-105 shadow-lg text-base"
                                         >
                                             View Gallery
@@ -182,10 +168,10 @@ export default function ProgramsPage() {
                                 {/* Access to Health */}
                                 <section className="bg-white p-8 rounded-3xl shadow-lg border-t-8 border-[#7B2CBF] relative group overflow-hidden">
                                     <div className="absolute top-0 right-0 w-24 h-24 bg-[#7B2CBF]/5 rounded-bl-full"></div>
-                                    <h3 className="text-2xl font-bold mb-4 text-[#1A1A2E]">Intersex Access to Health</h3>
-                                    <p className="text-gray-700 mb-6">Addressing systemic barriers to inclusive and ethical healthcare. We challenge non-consensual medical interventions and advocate for respectful, informed, and rights-based health services for intersex persons.</p>
+                                    <h3 className="text-2xl font-bold mb-4 text-[#1A1A2E]">Inclusive access to SRHR services in Kenya</h3>
+                                    <p className="text-gray-700 mb-6">We work to dismantle systemic barriers to equitable and ethical sexual and reproductive health services. We challenge non-consensual medical practices and promote access to respectful, informed, and rights-based SRHR for intersex, transgender, and gender non-conforming persons.</p>
                                     <div className="relative h-48 rounded-2xl overflow-hidden">
-                                        <Image src="/queer artwork/ribbon swirl.webp" alt="Health Program" fill className="object-cover" />
+                                        <Image src="/queer artwork/new/srhr.jpeg" alt="Health Program" fill className="object-cover" />
                                     </div>
                                 </section>
 
@@ -226,14 +212,14 @@ export default function ProgramsPage() {
                                 <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-purple-50 flex flex-col lg:flex-row-reverse gap-12 items-center">
                                     <div className="w-full lg:w-1/2 space-y-6">
                                         <div className="inline-block px-4 py-1 bg-[#7B2CBF] text-white font-bold rounded-full text-sm">CULTURE & ART</div>
-                                        <h3 className="text-3xl font-bold text-[#1A1A2E]">The Art of <span className="text-[#7B2CBF]">Every-Body</span></h3>
+                                        <h3 className="text-3xl font-bold text-[#1A1A2E]">The Art of <span className="text-[#EC4899]">Every-Body</span></h3>
                                         <p className="text-gray-700 leading-relaxed italic">Creating awareness about our bodies—ITGNC, Trans, and Intersex bodies—using art as a tool for political dialogue and body acceptance. First launched in August 2024 in partnership with visual artist queer_hemut, featuring art exhibitions, film screenings, and performances.</p>
                                     </div>
-                                    <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 h-80">
-                                        <div className="relative rounded-2xl overflow-hidden shadow-xl rotate-[-2deg]">
-                                            <Image src="/queer artwork/omar-lille Design inspiration.webp" alt="Art of Every-Body" fill className="object-cover" />
+                                    <div className="w-full lg:w-1/2 flex flex-row gap-4 sm:gap-6 items-center">
+                                        <div className="basis-[70%] relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/2] transition-transform hover:scale-[1.02] duration-300">
+                                            <Image src="/queer artwork/new/art-of-everybody.jpeg" alt="Art of Every-Body" fill className="object-cover" />
                                         </div>
-                                        <div className="relative rounded-2xl overflow-hidden shadow-xl rotate-[2deg] translate-y-4">
+                                        <div className="basis-[30%] relative rounded-2xl overflow-hidden shadow-xl aspect-[2/3] translate-y-6 transition-transform hover:translate-y-2 duration-300">
                                             <Image src="/queer-gallery-events/WIN03024.jpg" alt="Art Exhibition" fill className="object-cover" />
                                         </div>
                                     </div>
@@ -260,7 +246,7 @@ export default function ProgramsPage() {
                                                     COMING SOON
                                                 </div>
                                                 <p className="text-xl text-gray-700 leading-relaxed">
-                                                    We are building sustainable futures through creative skill-sharing and professional development for our community.
+We are building sustainable futures through hands-on skills training and economic empowerment programs.
                                                 </p>
                                             </div>
 
@@ -292,7 +278,7 @@ export default function ProgramsPage() {
                                                 <div className="relative p-3 bg-white shadow-2xl rounded-3xl transform rotate-3 transition-transform group-hover:rotate-0 border-8 border-white">
                                                     <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
                                                         <Image
-                                                            src="/queer artwork/queer ladder.webp"
+                                                            src="/queer artwork/new/beeds2.jpeg"
                                                             alt="Queer Ladder - Empowerment"
                                                             fill
                                                             className="object-cover"
@@ -300,14 +286,14 @@ export default function ProgramsPage() {
                                                     </div>
                                                     {/* Handwritten style caption if we had a font, otherwise just a nice border */}
                                                     <div className="pt-6 pb-2 text-center">
-                                                        <span className="font-script text-2xl text-[#7B2CBF]">Rise Together</span>
+                                                        <span className="font-script text-2xl text-[#7B2CBF]">Economic justice</span>
                                                     </div>
                                                 </div>
 
                                                 {/* Extra decorative artwork overlapping */}
-                                                <div className="absolute -bottom-8 -right-8 w-32 h-32 rotate-[-12deg] drop-shadow-xl transition-transform group-hover:rotate-0">
+                                                {/* <div className="absolute -bottom-8 -right-8 w-32 h-32 rotate-[-12deg] drop-shadow-xl transition-transform group-hover:rotate-0">
                                                     <Image src="/queer artwork/quuer and queen.webp" alt="artwork" width={150} height={150} />
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </div>

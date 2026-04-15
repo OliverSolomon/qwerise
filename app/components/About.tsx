@@ -13,44 +13,31 @@ export default function About() {
       <div className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left column - Floating images */}
-            <div className="relative h-[400px] sm:h-[500px] lg:h-[600px]">
-              {/* Photo Frame 1 - Top right (tilted slightly) */}
-              <div className="absolute top-0 right-0 sm:top-4 sm:right-4 w-40 h-52 sm:w-56 sm:h-72 bg-white rounded-lg p-2 shadow-2xl transform rotate-[6deg] z-30">
-                <div className="w-full h-full rounded-md overflow-hidden">
+            {/* Left column - Extra large landscape focus */}
+            <div className="flex flex-row gap-2 sm:gap-4 items-center justify-center lg:justify-start w-full">
+              {/* Photo Frame 1 - queer-joy (Massive Landscape, ~80% ratio) */}
+              <div className="basis-[80%] sm:basis-4/5 max-w-[650px] aspect-[3/2] bg-white rounded-lg p-2 sm:p-5 shadow-2xl z-20">
+                <div className="w-full h-full rounded-md overflow-hidden relative">
                   <Image
-                    src="/queer artwork/queer portrait.webp"
-                    alt="Portrait from queer artwork"
-                    width={224}
-                    height={288}
-                    className="w-full h-full object-cover"
+                    src="/queer artwork/new/queer-joy.jpeg"
+                    alt="Queer Joy Artwork"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 80vw, 55vw"
+                  />
+                </div>
+              </div>
+
+              {/* Photo Frame 2 - trans1 (Tiny Accent, ~20% ratio) */}
+              <div className="basis-[20%] sm:basis-1/5 max-w-[140px] aspect-[1/2] bg-white rounded-lg p-1 sm:p-1.5 shadow-xl z-10">
+                <div className="w-full h-full rounded-md overflow-hidden relative">
+                  <Image
+                    src="/queer artwork/new/trans1.jpeg"
+                    alt="Trans Artwork"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 20vw, 10vw"
                     priority
-                  />
-                </div>
-              </div>
-
-              {/* Photo Frame 2 - Bottom right (tilted, overlapping) */}
-              <div className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 w-40 h-52 sm:w-56 sm:h-72 bg-white rounded-lg p-2 shadow-2xl transform rotate-[-5deg] z-20">
-                <div className="w-full h-full rounded-md overflow-hidden">
-                  <Image
-                    src="/queer artwork/proud being me.webp"
-                    alt="Portrait from queer artwork"
-                    width={224}
-                    height={288}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Photo Frame 3 - Bottom left (partially visible, tilted) */}
-              <div className="absolute bottom-0 left-0 w-40 h-52 sm:w-56 sm:h-72 bg-white rounded-lg p-2 shadow-2xl transform rotate-[8deg] z-10 overflow-hidden">
-                <div className="w-full h-full rounded-md overflow-hidden">
-                  <Image
-                    src="/queer artwork/lgbtqueer.webp"
-                    alt="Portrait from queer artwork"
-                    width={224}
-                    height={288}
-                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -64,7 +51,7 @@ export default function About() {
                 <br />
                 <span className="font-normal">here for you</span>
                 <br />
-                <span className="font-script text-5xl sm:text-6xl lg:text-7xl italic">About Us</span>
+                <span className="font-script text-5xl sm:text-6xl lg:text-7xl italic text-[#EC4899]">About Us</span>
               </h2>
 
               {/* Supporting text */}

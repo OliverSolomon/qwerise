@@ -33,7 +33,7 @@ export default function Header() {
     { name: "About Us", href: "/about" },
     { name: "Programs", href: "/programs" },
     { name: "Resources", href: "/resources" },
-    { name: "Gallery", href: "/gallery" },
+    // { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
   ];
 

@@ -4,15 +4,15 @@
 
 **Queers Got Talent** is an annual arts and advocacy program that creates safe, visible, and empowering platforms for queer and gender-diverse artists in Kenya. Through performance, storytelling, and creative expression, QGT challenges harmful stereotypes, counters anti-rights narratives, and amplifies the voices of marginalized communities.
 
-#### **Edition 3:Africanizing our Queer Cultures** 
+#### **Edition 3:Africanizing our Queer Cultures**
 
 The **third edition of Queers Got Talent** was held under the theme **“Africanizing our queer cultures,”** recognizing creativity as a powerful tool to counter anti-rights movements targeting LGBTQI+ and intersex persons in Kenya.
 
 This edition intentionally centered:
 
-* Queer, trans, non-binary, and intersex artists
+- Queer, trans, non-binary, and intersex artists
 
-* Art as a form of political expression and community healing
+- Art as a form of political expression and community healing
 
 Through music, spoken word, dance, visual art, and storytelling, We use our talents to reclaim spaces, affirm identity, and resist policies and ideologies that threaten bodily autonomy and human rights.
 
@@ -30,9 +30,9 @@ Observed through public education activities and powerful visual campaigns using
 
 The program focuses on:
 
-* **Challenging stigma, myths, and harmful medical practices**, including non-consensual interventions
+- **Challenging stigma, myths, and harmful medical practices**, including non-consensual interventions
 
-* **Centering intersex voices** through storytelling, advocacy, and community-led dialogue
+- **Centering intersex voices** through storytelling, advocacy, and community-led dialogue
 
 Through digital campaigns, community outreach, and storytelling, we create awareness **online, globally, and within grassroots spaces**, ensuring intersex narratives are visible beyond single-day commemorations.
 
@@ -40,22 +40,22 @@ Through digital campaigns, community outreach, and storytelling, we create aware
 
 Beyond awareness, our Intersex Programs intentionally create **empowerment opportunities** for intersex persons by:
 
-* Supporting leadership, advocacy, and storytelling initiatives
+- Supporting leadership, advocacy, and storytelling initiatives
 
-* Creating platforms for skills-building and economic empowerment
+- Creating platforms for skills-building and economic empowerment
 
-* Strengthening safe spaces that foster confidence, resilience, and collective power
+- Strengthening safe spaces that foster confidence, resilience, and collective power
 
 By combining awareness, advocacy, and empowerment, we work towards a future where intersex persons can live with autonomy, dignity, and equal access to healthcare and opportunities.
 
-#### **Intersex Access to Health Program**
+#### **Inclusive access to SRHR services Program**
 
 This program addresses the systemic barriers intersex persons face when accessing healthcare. It focuses on:
 
-* Awareness of intersex-inclusive and ethical healthcare
+- Awareness of intersex-inclusive and ethical healthcare
 
-* Challenging non-consensual medical interventions
+- Challenging non-consensual medical interventions
 
-* Advocating for respectful, informed, and rights-based health services
+- Advocating for respectful, informed, and rights-based health services
 
 The program also engages healthcare providers and community members to promote dignity and informed consent.

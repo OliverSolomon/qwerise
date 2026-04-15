@@ -53,7 +53,7 @@ export default function Footer() {
               <li><Link href="/" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">01</span> Home</Link></li>
               <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">02</span> About Us</Link></li>
               <li><Link href="/programs" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">03</span> Our Programs</Link></li>
-              <li><Link href="/gallery" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">04</span> Gallery</Link></li>
+              {/* <li><Link href="/gallery" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">04</span> Gallery</Link></li> */}
               <li><Link href="/resources" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">05</span> Resources</Link></li>
             </ul>
           </div>
