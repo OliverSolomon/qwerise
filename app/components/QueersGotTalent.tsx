@@ -69,7 +69,7 @@ export default function QueersGotTalent() {
             {/* Gallery Button */}
             <div className="text-center">
                 <Link
-                    href="/gallery"
+                    href="#"
                     className="inline-block px-10 py-4 bg-[#7B2CBF] hover:bg-[#6A1BB0] text-white font-bold text-xl rounded-full transition-all hover:scale-105 shadow-xl"
                 >
                     See Gallery
