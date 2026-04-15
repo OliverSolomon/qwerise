@@ -89,7 +89,7 @@ export default function ProgramsPage() {
                                     <div className="lg:col-span-12 relative order-first lg:order-none mb-4">
                                         <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video group/video">
                                             <ScrollVideo
-                                                src="/qgt-highlights-compressed.mp4"
+                                                src="https://cashcade.co.ke/video/qgt-highlights-compressed.mp4"
                                                 className="w-full h-full object-cover"
                                                 poster="/queers-got-talent/trophy.png"
                                             />

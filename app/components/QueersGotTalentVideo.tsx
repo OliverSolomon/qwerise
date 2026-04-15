@@ -17,7 +17,7 @@ export default function QueersGotTalentVideo() {
             <div className="w-full px-4 sm:px-0">
                 <div className="relative w-full aspect-video sm:aspect-[21/9] max-h-[80vh] overflow-hidden">
                     <ScrollVideo
-                        src="https://media.qwerise.org/qgt-highlights-compressed.mp4"
+                        src="https://cashcade.co.ke/video/qgt-highlights-compressed.mp4"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 shadow-inner pointer-events-none"></div>
