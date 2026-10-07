@@ -25,60 +25,54 @@ const inter = Inter({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://qwerise.org"),
-  title: "Q We Rise Network | Advancing Rights & Wellness for ITGNC & LBQ Communities",
-  description: "Q We Rise Network is a feminist, Kenyan-based organization advancing gender equity, mental wellness, and sexual and reproductive health rights for ITGNC and LBQ communities.",
-  keywords: "LGBTQ+, intersex, transgender, non-binary, lesbian, bisexual, queer, Kenya, feminist, SRHR, mental wellness, advocacy",
-  authors: [{ name: "Q We Rise Network" }],
-  robots: "noindex, nofollow", // Block search engines until launch
+export async function generateMetadata(): Promise<Metadata> {
+  const { general, social } = await getSiteSettings();
+  const ogAlt = "Q We Rise Network Logo - Feminist organization advancing rights for ITGNC and LBQ communities in Kenya";
+  return {
+    metadataBase: new URL("https://qwerise.org"),
+    title: general.seoTitle,
+    description: general.seoDescription,
+    keywords: general.keywords,
+    authors: [{ name: general.siteName }],
+    robots: "noindex, nofollow", // Block search engines until launch
+    openGraph: {
+      title: general.seoTitle,
+      description: general.socialDescription,
+      type: "website",
+      url: "https://qwerise.org",
+      siteName: general.siteName,
+      images: [{ url: "/logo-optimized.png", width: 1200, height: 630, alt: ogAlt }],
+      locale: "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: general.seoTitle,
+      description: general.socialDescription,
+      images: ["/logo-optimized.png"],
+      creator: "@QWeRiseNetwork",
+      site: "@QWeRiseNetwork",
+    },
+    other: {
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "og:image:type": "image/png",
+      "twitter:image:alt": ogAlt,
+    },
+  };
+}
 
-  // Enhanced Open Graph tags for social media sharing
-  openGraph: {
-    title: "Q We Rise Network - Advancing Rights for ITGNC & LBQ Communities",
-    description: "A feminist, Kenyan-based organization empowering ITGNC and LBQ individuals through rights-based advocacy, inclusive SRHR education, economic justice, and creative expression.",
-    type: "website",
-    url: "https://qwerise.org",
-    siteName: "Q We Rise Network",
-    images: [
-      {
-        url: "/logo-optimized.png",
-        width: 1200,
-        height: 630,
-        alt: "Q We Rise Network Logo - Feminist organization advancing rights for ITGNC and LBQ communities in Kenya",
-      },
-    ],
-    locale: "en_US",
-  },
-
-  // Twitter Card tags
-  twitter: {
-    card: "summary_large_image",
-    title: "Q We Rise Network - Advancing Rights for ITGNC & LBQ Communities",
-    description: "A feminist, Kenyan-based organization empowering ITGNC and LBQ individuals through rights-based advocacy, inclusive SRHR education, economic justice, and creative expression.",
-    images: ["/logo-optimized.png"],
-    creator: "@QWeRiseNetwork",
-    site: "@QWeRiseNetwork",
-  },
-
-  // Additional meta tags
-  other: {
-    "og:image:width": "1200",
-    "og:image:height": "630",
-    "og:image:type": "image/png",
-    "twitter:image:alt": "Q We Rise Network Logo - Feminist organization advancing rights for ITGNC and LBQ communities in Kenya",
-  },
-};
-
+import { getSiteSettings } from "@/sanity/lib/content";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AccessibilityTools from "./components/AccessibilityTools";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { general, contact, social } = await getSiteSettings();
+  const sameAs = [social.instagram, social.facebook, social.twitter, social.linkedin].filter(Boolean);
   return (
     <html lang="en">
       <head>
@@ -126,15 +120,11 @@ export default function RootLayout({
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+2547 14254097",
+                "telephone": contact.phone,
                 "contactType": "General Inquiry",
-                "email": "info@qwerise.org"
+                "email": contact.email
               },
-              "sameAs": [
-                "https://www.instagram.com/q_we_rise_network",
-                "https://www.facebook.com/QWeRiseNetwork",
-                "https://twitter.com/QWeRiseNetwork"
-              ],
+              "sameAs": sameAs,
               "mission": "To empower ITGNC and LBQ individuals through Rights-Based Advocacy, inclusive SRHR Education, Economic Justice, and Creative Expression that centers healing and communal care.",
               "areaServed": {
                 "@type": "Country",
@@ -156,9 +146,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${inter.variable} antialiased`}
       >
         <Toaster position="top-right" richColors />
-        <Header />
+        <Header navLinks={general.navLinks} donateLabel={general.donateLabel} donateUrl={general.donateUrl} />
         {children}
-        <Footer />
+        <Footer general={general} contact={contact} social={social} />
         <AccessibilityTools />
       </body>
     </html>

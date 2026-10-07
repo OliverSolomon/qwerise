@@ -4,8 +4,9 @@ const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+    remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
+  },
 };
 
 export default nextConfig;

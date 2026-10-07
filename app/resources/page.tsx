@@ -1,32 +1,13 @@
 
 import Accordion from "../components/Accordion";
 import Image from "next/image";
-import { BookOpen, Ambulance, Mail } from "lucide-react";
+import { BookOpen, Ambulance } from "lucide-react";
+import { getDoc } from "@/sanity/lib/content";
 
-const faqs = [
-    {
-        question: "How can I join Q We Rise Network?",
-        answer: "We welcome individuals from the ITGNC and LBQ communities to join our network. You can reach out to us via email at  Info@qwerise.org or follow our social media pages for calls for membership and volunteer opportunities."
-    },
-    {
-        question: "Where arc your offices located?",
-        answer: "We are based in Nairobi, Kenya. For security and privacy reasons, we share our physical address only with confirmed visitors and community members. Please contact us to schedule a visit."
-    },
-    {
-        question: "How can I support your work?",
-        answer: "You can support us through donations, volunteering your skills, or partnering with us on our programs. Every contribution helps us advance our mission of collective liberation and healing justice."
-    },
-    {
-        question: "Do you offer mental health support?",
-        answer: "Yes, holistic wellbeing is one of our core focus areas. We organize peer-led support circles, healing justice sessions, and can provide referrals to affirming mental health professionals."
-    },
-    {
-        question: "What is 'Queers Got Talent'?",
-        answer: "Queers Got Talent is our annual flagship event that offers a safe, affirming stage for queer artists to showcase their talents in music, dance, poetry, and more. It celebrates our joy and resilience."
-    }
-];
-
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+    const [page, contact] = await Promise.all([getDoc("resourcesPage"), getDoc("contactSettings")]);
+    const { header, educational, emergency, faq } = page;
+    const faqs = (faq.items ?? []).map((i: { question: string; answer: string }) => ({ question: i.question, answer: i.answer }));
     return (
         <div className="min-h-screen bg-[#FFF5F1] overflow-x-hidden">
 
@@ -48,10 +29,10 @@ export default function ResourcesPage() {
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-bold text-[#1A1A2E]">
-                            Resources & <span className="font-script text-[#7B2CBF]">FAQs</span>
+                            {header.title} <span className="font-script text-[#7B2CBF]">{header.titleHighlight}</span>
                         </h1>
                         <p className="mt-6 text-xl text-gray-700 max-w-2xl mx-auto">
-                            Find answers, learn more about our work, and access support.
+                            {header.intro}
                         </p>
                     </div>
 
@@ -68,11 +49,11 @@ export default function ResourcesPage() {
                                     <BookOpen className="w-10 h-10 text-[#FF6B35]" />
                                 </div>
 
-                                <h2 className="text-3xl font-bold text-[#1A1A2E] mb-4 relative z-10">Educational Materials</h2>
+                                <h2 className="text-3xl font-bold text-[#1A1A2E] mb-4 relative z-10">{educational.title}</h2>
                                 <p className="text-gray-700 text-lg leading-relaxed mb-8 flex-1 relative z-10">
-                                    Access our curated guides on SRHR, legal rights, and digital security for LGBTQ+ individuals in Kenya. Knowledge is power.
+                                    {educational.body}
                                 </p>
-                                <button className="inline-block px-6 py-3 bg-gray-100 text-gray-400 font-bold rounded-xl cursor-not-allowed relative z-10">Coming Soon</button>
+                                <button className="inline-block px-6 py-3 bg-gray-100 text-gray-400 font-bold rounded-xl cursor-not-allowed relative z-10">{educational.buttonLabel}</button>
                             </div>
                         </div>
 
@@ -87,11 +68,11 @@ export default function ResourcesPage() {
                                     <Ambulance className="w-10 h-10 text-[#00B4A6]" />
                                 </div>
 
-                                <h2 className="text-3xl font-bold text-[#1A1A2E] mb-4 relative z-10">Emergency Support</h2>
+                                <h2 className="text-3xl font-bold text-[#1A1A2E] mb-4 relative z-10">{emergency.title}</h2>
                                 <p className="text-gray-700 text-lg leading-relaxed mb-8 flex-1 relative z-10">
-                                    Need urgent help? We can connect you with legal aid partners and emergency shelters. You are not alone.
+                                    {emergency.body}
                                 </p>
-                                <a href="mailto: Info@qwerise.org" className="inline-block px-6 py-3 bg-[#00B4A6] text-white font-bold rounded-xl hover:bg-[#009688] transition-colors shadow-md relative z-10">Contact Support</a>
+                                <a href={`mailto:${contact.email}`} className="inline-block px-6 py-3 bg-[#00B4A6] text-white font-bold rounded-xl hover:bg-[#009688] transition-colors shadow-md relative z-10">{emergency.buttonLabel}</a>
                             </div>
                         </div>
                     </div>
@@ -107,20 +88,20 @@ export default function ResourcesPage() {
                             <div className="relative z-10 max-w-4xl mx-auto">
                                 <div className="text-center mb-12">
                                     <div className="inline-block px-4 py-1 bg-[#7B2CBF] text-white font-bold rounded-full text-sm mb-4">
-                                        SUPPORT
+                                        {faq.badge}
                                     </div>
                                     <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A2E] mb-6">
-                                        Frequently Asked <span className="font-script text-[#7B2CBF]">Questions</span>
+                                        {faq.title} <span className="font-script text-[#7B2CBF]">{faq.titleHighlight}</span>
                                     </h2>
                                 </div>
 
                                 <Accordion items={faqs} />
 
                                 <div className="text-center mt-12 bg-purple-50 p-8 rounded-2xl border border-purple-100">
-                                    <h3 className="text-xl font-bold text-[#7B2CBF] mb-2">Still have questions?</h3>
-                                    <p className="text-gray-600 mb-6">We're here to help. Reach out to us directly.</p>
+                                    <h3 className="text-xl font-bold text-[#7B2CBF] mb-2">{faq.stillTitle}</h3>
+                                    <p className="text-gray-600 mb-6">{faq.stillBody}</p>
                                     <a href="/contact" className="inline-block px-8 py-3 bg-[#1A1A2E] text-white font-bold rounded-lg hover:bg-gray-800 transition-colors shadow-lg">
-                                        Contact Us
+                                        {faq.stillButton}
                                     </a>
                                 </div>
                             </div>
