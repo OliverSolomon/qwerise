@@ -1,11 +1,11 @@
 // Hero section with main message and call-to-action
 // Features the organization's mission with Programs-style card
 
-"use client";
-
 import Image from "next/image";
+import type { Doc } from "@/sanity/lib/content";
+import { imgAlt, imgUrl } from "@/sanity/lib/image";
 
-export default function Hero() {
+export default function Hero({ data }: { data: Doc }) {
   return (
     <section className="relative bg-[#FFF5F1] min-h-[600px] overflow-hidden">
       {/* Decorative background elements */}
@@ -20,23 +20,23 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             {/* Main heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A2E] mb-6 leading-tight">
-              Rising Together{" "}
+              {data.title}{" "}
               <span className="font-medium tracking-tight text-3xl sm:text-4xl lg:text-5xl block mt-3 text-[#EC4899]">
-                for bodily autonomy, rights, and dignity.
+                {data.subtitle}
               </span>
             </h1>
 
             {/* Supporting text */}
             <p className="text-base sm:text-lg text-[#4A5568] mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Empowering ITGNC and LBQ individuals through rights-based advocacy, inclusive SRHR education, economic justice, and creative expression that centers healing and communal care.
+              {data.intro}
             </p>
 
             {/* CTA Button - Blue pill shape with arrow */}
             <a
-              href="/programs"
+              href={data.buttonLink}
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#1A3A5C] text-white font-bold rounded-full hover:bg-[#0F2A42] transition-all transform hover:scale-105 shadow-lg text-base"
             >
-              See our programs
+              {data.buttonLabel}
               <svg className="w-4 h-4 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
@@ -51,8 +51,8 @@ export default function Hero() {
             {/* Image container - same size as background, sits on top */}
             <div className="relative w-full max-w-xl h-96 sm:h-[28rem] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/queers-got-talent/trophy.png"
-                alt="Queers Got Talent Trophy - Celebrating LGBTQ+ talent and creativity"
+                src={imgUrl(data.image)}
+                alt={imgAlt(data.image)}
                 fill
                 className="object-cover"
                 priority

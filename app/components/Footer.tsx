@@ -1,12 +1,14 @@
 // Footer component with organization details and legal information
-// Provides essential information and maintains professional appearance
+// Content comes from Sanity (General, Contact and Social settings)
 
 import { FacebookIcon, InstagramIcon, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Doc } from "@/sanity/lib/content";
 
-export default function Footer() {
+export default function Footer({ general, contact, social }: { general: Doc; contact: Doc; social: Doc }) {
   const currentYear = new Date().getFullYear();
+  const quickLinks: { label: string; href: string }[] = general.navLinks ?? [];
 
   return (
     <footer className="bg-[#1A1A2E] text-white pt-20 pb-10 border-t-8 border-[#7B2CBF]">
@@ -27,22 +29,28 @@ export default function Footer() {
               </div>
               <h3 className="text-xl font-bold leading-tight">Q WE RISE <br /><span className="text-[#00B4A6]">NETWORK</span></h3>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Advancing gender equity, mental wellness, and SRHR for ITGNC and LBQ communities in Kenya through a feminist, rights-based approach.
-            </p>
+            <p className="text-gray-400 text-sm leading-relaxed">{general.footerBlurb}</p>
             <div className="flex space-x-4 pt-4">
-              <a href="https://www.instagram.com/q_we_rise_network" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-[#FF6B35] transition-colors" aria-label="Instagram">
-                <InstagramIcon size={20} />
-              </a>
-              <a href="https://www.facebook.com/QWeRiseNetwork" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-[#1877F2] transition-colors" aria-label="Facebook">
-                <FacebookIcon size={20} />
-              </a>
-              <a href="https://twitter.com/QWeRiseNetwork" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-[#1DA1F2] transition-colors" aria-label="Twitter">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-[#0077b5] transition-colors" aria-label="LinkedIn">
-                <Linkedin size={20} />
-              </a>
+              {social.instagram && (
+                <a href={social.instagram} target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-[#FF6B35] transition-colors" aria-label="Instagram">
+                  <InstagramIcon size={20} />
+                </a>
+              )}
+              {social.facebook && (
+                <a href={social.facebook} target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-[#1877F2] transition-colors" aria-label="Facebook">
+                  <FacebookIcon size={20} />
+                </a>
+              )}
+              {social.twitter && (
+                <a href={social.twitter} target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-[#1DA1F2] transition-colors" aria-label="Twitter">
+                  <Twitter size={20} />
+                </a>
+              )}
+              {social.linkedin && (
+                <a href={social.linkedin} target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-[#0077b5] transition-colors" aria-label="LinkedIn">
+                  <Linkedin size={20} />
+                </a>
+              )}
             </div>
           </div>
 
@@ -50,11 +58,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6 text-[#E0AAFF]">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">01</span> Home</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">02</span> About Us</Link></li>
-              <li><Link href="/programs" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">03</span> Our Programs</Link></li>
-              {/* <li><Link href="/gallery" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">04</span> Gallery</Link></li> */}
-              <li><Link href="/resources" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><span className="text-[#FF6B35] text-xs">05</span> Resources</Link></li>
+              {quickLinks.map((link, i) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                    <span className="text-[#FF6B35] text-xs">{String(i + 1).padStart(2, "0")}</span> {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -66,14 +76,14 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-[#00B4A6] mt-1 shrink-0" />
                 <div>
                   <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">Email</span>
-                  <a href="mailto: Info@qwerise.org" className="text-white hover:text-[#00B4A6] transition-colors break-all"> Info@qwerise.org</a>
+                  <a href={`mailto:${contact.email}`} className="text-white hover:text-[#00B4A6] transition-colors break-all">{contact.email}</a>
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <Phone className="w-5 h-5 text-[#00B4A6] mt-1 shrink-0" />
                 <div>
                   <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">Phone</span>
-                  <a href="tel:+254727776506" className="text-white hover:text-[#00B4A6] transition-colors">+254 727 776 506</a>
+                  <a href={`tel:${contact.phoneLink}`} className="text-white hover:text-[#00B4A6] transition-colors">{contact.phone}</a>
                 </div>
               </li>
             </ul>
@@ -81,12 +91,10 @@ export default function Footer() {
 
           {/* Newsletter / Get Involved */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-[#FF6B35]">Get Involved</h3>
-            <p className="text-gray-400 text-sm mb-6">
-              Join our network and be part of the change. We welcome volunteers, partners, and allies.
-            </p>
+            <h3 className="text-lg font-bold mb-6 text-[#FF6B35]">{general.getInvolvedTitle}</h3>
+            <p className="text-gray-400 text-sm mb-6">{general.getInvolvedText}</p>
             <Link href="/contact" className="inline-block px-6 py-3 bg-[#FF6B35] hover:bg-[#e05a2b] text-white font-bold rounded-lg transition-colors w-full text-center">
-              Partner With Us
+              {general.getInvolvedButton}
             </Link>
           </div>
 
@@ -95,7 +103,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-gray-500">
-            © {currentYear} Q We Rise Network. All rights reserved.
+            © {currentYear} {general.siteName}. All rights reserved.
           </div>
           <div className="flex gap-6 text-sm text-gray-500">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>

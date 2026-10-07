@@ -4,7 +4,7 @@ import { Mail, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-export default function NewsletterSection() {
+export default function NewsletterSection({ badge, title, titleHighlight, body }: { badge: string; title: string; titleHighlight: string; body: string }) {
     const [email, setEmail] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
@@ -47,11 +47,11 @@ export default function NewsletterSection() {
 
                         <div className="relative z-10 w-full text-center max-w-3xl mx-auto">
                             <div className="inline-block px-4 py-1 bg-[#7B2CBF] text-white font-bold rounded-full text-sm mb-6 uppercase tracking-wider">
-                                Newsletter
+                                {badge}
                             </div>
-                            <h2 className="text-4xl font-bold text-[#1A1A2E] mb-6">Stay <span className="text-[#FF6B35]">Connected</span></h2>
+                            <h2 className="text-4xl font-bold text-[#1A1A2E] mb-6">{title} <span className="text-[#FF6B35]">{titleHighlight}</span></h2>
                             <p className="text-lg text-gray-700 leading-relaxed mb-10">
-                                Join our community newsletter to receive updates on our programs, upcoming events, and stories of impact.
+                                {body}
                             </p>
 
                             <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
