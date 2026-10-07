@@ -1,5 +1,5 @@
 
-import Accordion from "../components/Accordion";
+import Accordion from "../../components/Accordion";
 import Image from "next/image";
 import { BookOpen, Ambulance } from "lucide-react";
 import { getDoc } from "@/sanity/lib/content";

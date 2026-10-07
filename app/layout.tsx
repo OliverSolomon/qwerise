@@ -62,16 +62,13 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 import { getSiteSettings } from "@/sanity/lib/content";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import AccessibilityTools from "./components/AccessibilityTools";
 
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { general, contact, social } = await getSiteSettings();
+  const { contact, social } = await getSiteSettings();
   const sameAs = [social.instagram, social.facebook, social.twitter, social.linkedin].filter(Boolean);
   return (
     <html lang="en">
@@ -146,10 +143,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${inter.variable} antialiased`}
       >
         <Toaster position="top-right" richColors />
-        <Header navLinks={general.navLinks} donateLabel={general.donateLabel} donateUrl={general.donateUrl} />
         {children}
-        <Footer general={general} contact={contact} social={social} />
-        <AccessibilityTools />
       </body>
     </html>
   );

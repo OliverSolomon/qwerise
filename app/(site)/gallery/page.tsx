@@ -1,7 +1,7 @@
-import GalleryGrid from "../components/GalleryGrid";
+import GalleryGrid from "../../components/GalleryGrid";
 import { getDoc } from "@/sanity/lib/content";
 import { imgUrl } from "@/sanity/lib/image";
-import { brand } from "../components/icons";
+import { brand } from "../../components/icons";
 
 export default async function GalleryPage() {
     const page = await getDoc("galleryPage");
