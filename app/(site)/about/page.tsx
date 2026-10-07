@@ -2,8 +2,8 @@ import Image from "next/image";
 import { Target, Eye, Camera, Mail, Phone, Instagram } from "lucide-react";
 import { getDoc } from "@/sanity/lib/content";
 import { imgAlt, imgUrl } from "@/sanity/lib/image";
-import RichText from "../components/RichText";
-import { brand, getIcon } from "../components/icons";
+import RichText from "../../components/RichText";
+import { brand, getIcon } from "../../components/icons";
 
 export default async function AboutPage() {
     const [page, contact, social] = await Promise.all([getDoc("aboutPage"), getDoc("contactSettings"), getDoc("socialSettings")]);

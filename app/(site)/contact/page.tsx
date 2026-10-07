@@ -1,8 +1,8 @@
 
 import Image from "next/image";
 import { Mail, Phone, Instagram, Heart } from "lucide-react";
-import NewsletterSection from "../components/NewsletterSection";
-import RichText from "../components/RichText";
+import NewsletterSection from "../../components/NewsletterSection";
+import RichText from "../../components/RichText";
 import { getDoc } from "@/sanity/lib/content";
 
 export default async function ContactPage() {

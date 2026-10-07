@@ -1,8 +1,8 @@
 // Q We Rise Network home page. Content is managed in Sanity Studio (Pages → Home).
 
-import Hero from "./components/Hero";
-import About from "./components/About";
-import QueersGotTalent from "./components/QueersGotTalent";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import QueersGotTalent from "../components/QueersGotTalent";
 import { fileUrl, getDoc } from "@/sanity/lib/content";
 
 export default async function Home() {

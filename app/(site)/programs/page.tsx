@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { fileUrl, getDoc } from "@/sanity/lib/content";
 import { imgAlt, imgUrl } from "@/sanity/lib/image";
-import ScrollVideo from "../components/ScrollVideo";
-import RichText from "../components/RichText";
+import ScrollVideo from "../../components/ScrollVideo";
+import RichText from "../../components/RichText";
 
 export default async function ProgramsPage() {
     const p = await getDoc("programsPage");
