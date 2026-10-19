@@ -1,13 +1,10 @@
-import { sanityFetch, SANITY_TAG } from "./live";
+import { sanityFetch } from "./live";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type Doc = Record<string, any>;
 
-// Reads go through sanityFetch so they are cached and refreshed on publish (see ./live).
-async function read<T>(query: string, params: Record<string, string>): Promise<T> {
-  const { data } = await sanityFetch({ query, params, tags: [SANITY_TAG], stega: false });
-  return data as T;
-}
+// Reads are cached and refreshed on publish or every 60 seconds (see ./live).
+const read = sanityFetch;
 
 /** The fixed-ID (singleton) document of this type, with uploaded files resolved to URLs. */
 export async function getDoc(id: string): Promise<Doc> {
