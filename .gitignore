@@ -45,3 +45,4 @@ next-env.d.ts
 # large files
 *.mp4
 public/queers got talent highlights.mp4
+!.env.template
