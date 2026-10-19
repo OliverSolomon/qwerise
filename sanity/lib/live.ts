@@ -1,24 +1,28 @@
 import { createClient } from "next-sanity";
-import { defineLive } from "next-sanity/live";
 import { apiVersion, dataset, projectId } from "../env";
 
 /**
- * How content edited in the Studio reaches the live site (same approach as
- * the Pavani site).
+ * How content edited in the Studio reaches the live site.
  *
- * `sanityFetch` caches every query until it is told the content changed.
- * Two layers clear that cache, both instant:
- *  1. <SanityLive /> (rendered in app/(site)/layout.tsx): listens to the
- *     Live Content API whenever a visitor has the site open.
- *  2. /api/revalidate: a Sanity webhook fired on every publish, so the
- *     change shows on the next page load even when nobody is on the site.
- *
- * The dataset is public and only published content is shown, so no token is
- * needed here.
+ * Kaara and Pavani get this from next-sanity 12's defineLive with
+ * `fetchOptions: { revalidate: 60 }`. qwerise runs next-sanity 13, where
+ * defineLive caches every query forever and dropped that option, so edits
+ * only appeared after a redeploy. Here the same behaviour is set directly on
+ * each fetch instead:
+ *  1. /api/revalidate: instant, when the Sanity webhook fires on publish.
+ *  2. REVALIDATE_SECONDS: a time-based safety net that needs no setup. After
+ *     this many seconds the next visitor triggers a background refresh.
  */
-export const { sanityFetch, SanityLive } = defineLive({
-  client: createClient({ projectId, dataset, apiVersion, useCdn: true }),
-});
+export const REVALIDATE_SECONDS = 60;
 
-/** Extra tag on every query so the webhook can expire all content at once. */
+/** Tag on every query so the webhook can expire all content at once. */
 export const SANITY_TAG = "sanity";
+
+// useCdn: false so a refresh right after a publish never reads a stale CDN copy.
+const client = createClient({ projectId, dataset, apiVersion, useCdn: false });
+
+export function sanityFetch<T>(query: string, params: Record<string, string> = {}): Promise<T> {
+  return client.fetch<T>(query, params, {
+    next: { revalidate: REVALIDATE_SECONDS, tags: [SANITY_TAG] },
+  });
+}
